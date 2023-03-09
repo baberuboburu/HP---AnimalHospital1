@@ -1,0 +1,217 @@
+@use "../foundation/mixin" as bp;
+.l-header{
+  @extend .flex;
+  width: 93.1vw;
+  height:11.6rem;
+  margin-left:auto;
+  margin-right:auto;
+
+  &__logo{
+    @extend .flex;
+    height:100%;
+    align-items: flex-end;
+    &__img{
+      width:9.0rem;
+      height:9.25rem;
+      &--sp{
+        display: none;
+      }
+    }
+    &__ttl{
+      @extend .font_green;
+      font-size:4.8rem;
+      margin-left:1em;
+    }
+  }
+  &__hum{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 22.82px;
+    height: 22px;
+    margin-right: 26.3px;
+    &--1,&--2,&--3{
+      width: 22.82px;
+      height: 2px;
+      border-radius: 10%;
+      background-color: bp.$brown2;
+      position: absolute;
+    }
+    &--1{
+      top: 0;
+      left: 0;
+    }
+    &--2{
+      top: 8px;
+      left: 0;
+    }
+    &--3{
+      top: 16px;
+      left: 0;
+    }
+  }
+  &__menu{
+    display: none;
+    background-color: bp.$brown1;
+    width: 282px;
+    height: 600px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    padding-top: 22.45px;
+    &__ttl{
+      @extend .flex;
+      @extend .font_koz;
+      align-items: center;
+      font-size: 2.4rem;
+      color: white;
+      margin: 0 32px 22.45px 32px;
+      &__cross{
+        position: relative;
+        width: 50px;
+        height: 36px;
+        cursor: pointer;
+        &--1{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 26.18px;
+          height: 2px;
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &--2{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 26.18px;
+          height: 2px;
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    &__line{
+      width: 100%;
+      height: 1px;
+      background-color: #EED591;
+    }
+    &__list{
+      padding: 0 37px;
+      text-align: left;
+      &__f{
+        @extend .flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &__arrow{
+          height: 10px;
+          transform: translateX(3px) translateY(8px);
+          &__bg{
+            position: relative;
+            width: 33px;
+            height: 1px;
+            background-color: white;
+            &::after{
+              content: '';
+              position: absolute;
+              top: -100%;
+              right: 0;
+              width: 5.657px;
+              height: 1px;
+              transform: rotate(45deg);
+              background-color: white;
+            }
+          }
+        }
+        &__a{
+          @extend .font_koz;
+          color: white;
+          font-size: 1.8rem;
+          margin-left: 18px;
+        }
+      }
+      &__li{
+        margin-left: 51px;
+        &__a{
+          @extend .font_koz;
+          color: white;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  &__txts{
+    @extend .font_green;
+    @extend .flex_column;
+    height:100%;
+    justify-content: flex-end;
+    align-items: baseline;
+    &__p{
+      font-size:1.6rem;
+      &--sub{
+        font-size:3.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+  &__reserve{
+    display: inline-block;
+    background-color: #EED591;
+    width:23.1rem;
+    height:100%;
+    text-align: center;
+    position:relative;
+    border-radius: 0 0 10px 10px;
+    box-shadow:0px 1px 10px 1px grey;
+    &__b{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translateY(-50%) translateX(-50%);
+      @extend .font_brown2;
+      &__p{
+        font-size:2.0rem;
+        line-height: 1;
+        margin-bottom:1em;
+        &--sub{
+          font-size:1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@include bp.breakpoint(sp){
+  .l-header{
+    width: 100vw;
+    height: 66.39px;
+    &__logo{
+      align-items: center;
+      margin-left: 14px;
+      &__img{
+        width: 54px;
+        height: 44px;
+        &--pc{
+          display: none;
+        }
+        &--sp{
+          display: block;
+          width: 100%;
+        }
+      }
+      &__ttl{
+        font-size: 1.4rem;
+      }
+    }
+    &__hum{
+      display: block;
+    }
+    &__txts{
+      display: none;
+    }
+    &__reserve{
+      display: none;
+    }
+  }
+}

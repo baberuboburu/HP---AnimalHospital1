@@ -1,0 +1,26 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.c-schedule{
+  width: 532px;
+  height: 271px;
+  &.c-schedule__long{
+    height: 373px;
+  }
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  @extend .flex_column;
+  justify-content: center;
+  &__txt{
+    width:392px;
+    margin-top: 7.1px;
+    text-align: start;
+    font-size: 1.2rem;
+    @extend .font;
+  }
+  &__topimg{
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+  }
+}

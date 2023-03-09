@@ -1,0 +1,121 @@
+//media-queryは今後廃止の方向に進んでいく。
+//font-sizeは可能な限りremで統一
+@mixin breakpoint($point) {
+  // ブラウザサイズ1024pxより小さい時
+  @if $point == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  // ブラウザサイズ599pxより小さい時
+  @if $point == sp {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
+
+// fontはここに集約
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+  width: 100vw;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  color: #444;
+}
+
+// カラー変数
+$brown1:#573E00;
+$brown2:#4B3300;
+$light_green:#C8E2D3;
+$green:#18663A;
+$deep_green:#3A6E50;
+$grey:#484848;
+$yellow:#EED591;
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.font{
+  font-family: "FOT-TsukuARdGothic Std";
+}
+
+.font_m{
+  font-family: "Montserrat", sans-serif;
+}
+
+.font_white{
+  font-family: "FOT-TsukuARdGothic Std";
+  color:white;
+}
+
+.font_green{
+  font-family: "FOT-TsukuARdGothic Std";
+  color:$green;
+}
+.font_brown1{
+  font-family: "FOT-TsukuARdGothic Std";
+  color:$brown1;
+}
+.font_brown2{
+  font-family: "FOT-TsukuARdGothic Std";
+  color:$brown2;
+}
+.font_grey{
+  font-family: "FOT-TsukuARdGothic Std";
+  color:$grey;
+}
+.font_koz{
+  font-family: "KozGoPr6N-Regular";
+}
+.font_zen{
+  font-family: "Zen Maru Gothic";
+}
+
+// 共通項目があれば
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+.flex{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex_column{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.position_center{
+  left:50%;
+  top:50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+
+
+
+@mixin margin($margin:10px){
+  height:$margin;
+  width:100%;
+}

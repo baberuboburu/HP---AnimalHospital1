@@ -1,0 +1,22 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.c-bg__yellow{
+  width: 100%;
+  height: 100%;
+  background-color: #FAF1D4;
+  border-radius: 10px;
+  position: relative;
+  @extend .flex_column;
+  justify-content: center;
+}
+
+.c-bg__white{
+  width:100%;
+  &.c-bg__716{
+    height:716.99px;
+  }
+  background-color: white;
+  border-radius: 10px;
+  @extend .flex_column;
+  justify-content: center;
+}

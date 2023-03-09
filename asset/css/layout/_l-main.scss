@@ -1,0 +1,474 @@
+@use "./../foundation/_mixin.scss" as bp;
+
+// fv
+.l-fv{
+  height: 488.84px;
+  margin-top: 36.42px;
+  position: relative;
+  overflow: hidden;
+  &__dog{
+    position:relative;
+    height:100%;
+    transform:translateX(2.5%);
+    &__img{
+      overflow: hidden;
+      &__opacity{
+        content: "";
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+      }
+    }
+    &__txt{
+      width:435px;
+      position: absolute;
+      @extend .position_center;
+      @extend .flex_column;
+      font-family: Zen Maru Gothic;
+      color:white;
+      z-index: 3;
+      &__p{
+        font-weight: bold;
+        font-size:4.293rem;
+        &--sub{
+          margin-top:20px;
+          font-weight: light;
+          text-align:start;
+          font-weight: light;
+          font-size:1.6rem;
+        }
+      }
+    }
+  }
+  &__tree1{
+    position: absolute;
+    bottom:-32.74px;
+    right:221px;
+    z-index: 1;
+  }
+  &__tree2{
+    position: absolute;
+    bottom:-32.74px;
+    right:-28px;
+  }
+}
+
+// menu
+.l-menu{
+  @extend .flex;
+  height:130px;
+  justify-content: center;
+  &__img{
+    display: inline-block;
+    margin:0 20px;
+  }
+}
+
+// topsp
+.l-topsp{
+  display: none;
+  height: 324.03px;
+  position: relative;
+  &__btn{
+    @extend .flex;
+    justify-content: center;
+    margin-top: 17.03px;
+  }
+  &__txt{
+    padding: 0 35.31px;
+    @extend .font_zen;
+    color: bp.$brown2;
+    font-size: 1.4rem;
+    margin-top: 33.1px;
+    letter-spacing: 1px;
+  }
+  &__img{
+    position: absolute;
+    bottom: -3px;
+    right: 30px;
+  }
+}
+
+// main
+.l-news{
+  @extend .flex;
+  height: 975px;
+  background-color: #33593A;
+  padding:0 100px;
+  padding-top: 96px;
+  position: relative;
+  &__sp{
+    display: none;
+  }
+  &__left{
+    width:50%;
+    height:100%;
+    position: relative;
+    &__main{
+      width: 433px;
+      height: 255px;
+      margin-top: 38.93px;
+      &__please{
+        @extend .font_brown1;
+        font-size: 1.8rem;
+      }
+      &__list{
+        width: 100%;
+        padding-left: 33px;
+        @extend .flex;
+        justify-content: flex-start;
+        margin-top: 1.0rem;
+        &__index{
+          position: relative;
+          &__round{
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: bp.$brown1;
+          }
+          &__number{
+            @extend .font_m;
+            color: white;
+            font-size: 1.4rem;
+            position: absolute;
+            @extend .position_center;
+          }
+        }
+        &__p{
+          margin-left: 1.4rem;
+          @extend .font_grey;
+        }
+      }
+    }
+    &__list{
+      width: 375.72px;
+      height: 150.49px;
+      margin-top: 47.2px;
+    }
+    &__more{
+      width: 100%;
+      margin-top: 46.41px;
+      @extend .flex;
+      justify-content: flex-end;
+      padding-right: 77.98px;
+      &__box{
+        &__link{
+          @extend .flex;
+          align-items: flex-end;
+          &__p{
+            @extend .font_brown1;
+            font-size: 1.6rem;
+          }
+          &__arrow{
+            height: 10px;
+            transform: translateX(3px) translateY(8px);
+            &__bg{
+              position: relative;
+              width: 33px;
+              height: 1px;
+              background-color: bp.$brown1;
+              &::after{
+                content: '';
+                position: absolute;
+                top: -100%;
+                right: 0;
+                width: 5.657px;
+                height: 1px;
+                transform: rotate(45deg);
+                background-color: bp.$brown1;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__img{
+      position: absolute;
+      bottom: 160.01px;
+      left: 37px;
+    }
+  }
+  &__right{
+    width:50%;
+    height: 100%;
+    padding-left: 58px;
+    &__margin{
+      @include bp.margin(21.22px);
+    }
+    &__attention{
+      @extend .font_white;
+      font-size: 1.5rem;
+      width:532px;
+      margin-top: 26.61px;
+      text-align: left;
+    }
+  }
+  &__grass1{
+    position: absolute;
+    bottom: -2px;
+    left: -15px;
+  }
+  &__grass2{
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.l-feat{
+  padding-top: 94.65px;
+  &__box{
+    @extend .flex;
+    margin-top: 107.42px;
+    margin-bottom: 81.86px;
+    padding:0 100px;
+    &__left{
+      width: 50%;
+      padding-right: 12.74px;
+      text-align: left;
+      &__p{
+        @extend .font_brown1;
+        font-size: 1.6rem;
+        line-height: 2;
+      }
+    }
+    &__right{
+      width: 50%;
+      @extend .flex;
+      justify-content: center;
+      &__animals{
+        width: 495px;
+        height: 176px;
+        &__p{
+          @extend .font_brown2;
+          font-size: 1.8rem;
+        }
+        &__ul{
+          @extend .flex;
+          width: 100%;
+          margin-top: 13.3px;
+          padding: 0 60.5px;
+          &__li{
+            @extend .font_brown2;
+            font-size: 1.4rem;
+            &__img{
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__imgs{
+    background-color: #F1F1EF;
+    padding: 31px 0;
+    &__cards{
+      @extend .flex;
+      justify-content: center;
+    }
+  }
+  &__margin{
+    width: 100%;
+    height: 155px;
+    background-color: white;
+  }
+}
+
+.l-cal{
+  width: 100%;
+  background-image: url('../images/top_cal_bg.png');
+  background-size: cover;
+  padding-top: 98.65px;
+  padding-bottom: 136px;
+  position: relative;
+  &__calender{
+    @extend .flex;
+    justify-content: center;
+    margin-top: 48.57px;
+    &__img{
+      position: relative;
+      &__illust{
+        position: absolute;
+        top: -108px;
+        right: 0;
+      }
+    }
+  }
+  &__grass--1{
+    position: absolute;
+    bottom: -2px;
+    left: -15px;
+  }
+  &__grass--2{
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.l-reserve{
+  background-color: #33593A;
+  color: white;
+  padding-top: 92.92px;
+  padding-bottom: 134.17px;
+  position: relative;
+  text-align: center;
+  &__p{
+    margin-top: 115.62px;
+    margin-bottom: 19.67px;
+    @extend .font;
+    font-size: 1.6rem;
+  }
+  &__what{
+    width: 838px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend .font_brown1;
+    &--main{
+      font-size: 1.8rem;
+      margin-top: 48.83px;
+    }
+    &--sub{
+      font-size: 1.6rem;
+      margin-top: 24.14px;
+      padding: 0 56.79px 56.79px 56.79px;
+      text-align: left;
+    }
+  }
+  &__guide{
+    @extend .font;
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-top: 99.99px;
+  }
+  &__btn{
+    @extend .flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  &__contact{
+    margin-top: 44.82px;
+    position: relative;
+    z-index: 1;
+    &--p{
+      @extend .font;
+      font-size: 2.0rem;
+    }
+    &--tel{
+      @extend .font_m;
+      font-size: 3.6rem;
+      font-weight: bold;
+    }
+  }
+  &--tree1{
+    position: absolute;
+    bottom: 0;
+    left: -186px;
+  }
+  &--tree2{
+    position: absolute;
+    bottom: -35px;
+    right: 117px;
+  }
+}
+
+.l-topaccess{
+  padding-top: 133.98px;
+  &__ttl{
+    position: relative;
+    &__img{
+      position: absolute;
+      bottom: -30px;
+      left: calc(50% + 74.985px);
+    }
+  }
+  &__btn{
+    @extend .flex;
+    justify-content: flex-start;
+    padding: 0 100px;
+    margin-top: 110.73px;
+    margin-bottom: 23.22px;
+    &__address{
+      @extend .font_brown1;
+      font-size: 1.6rem;
+      margin-right: 10%;
+    }
+  }
+  &__map{
+    width: 100vw;
+    height: 467.84px;
+    overflow: hidden;
+  }
+}
+
+
+
+@include bp.breakpoint(sp){
+  .l-fv{
+    height: 284.97px;
+    margin-top: 0;
+    background-image: url('../images/fv_dog_sp.png');
+    background-size: cover;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #454545;
+      opacity: 0.26;
+    }
+    &__dog{
+      transform:none;
+      &__img{
+        display: none;
+      }
+      &__txt{
+        &__p{
+          font-size: 2.0rem;
+          &--sub{
+            display: none;
+          }
+        }
+      }
+    }
+    &__tree1{
+      width: 93px;
+      height: 102px;
+      bottom:-10.03px;
+      right:76px;
+      &__img{
+        width: 100%;
+      }
+    }
+    &__tree2{
+      width: 252px;
+      height: 156px;
+      bottom:-2.03px;
+      right:-36px;
+      &__img{
+        width: 100%;
+      }
+    }
+  }
+  .l-menu{
+    display: none;
+  }
+  .l-topsp{
+    display: block;
+  }
+  .l-news{
+    display: block;
+    padding: 44px 0 0 0;
+    &__sp{
+      display: block;
+      width: 93.6%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

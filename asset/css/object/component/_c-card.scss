@@ -1,0 +1,21 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.c-card{
+  display: block;
+  width: 300px;
+  background-color: white;
+  border: 1px #E9E4E0 solid;
+  padding: 23px;
+  &__txt{
+    @extend .font_brown2;
+    margin-top: 18.97px;
+    &--main{
+      font-size: 1.6rem;
+    }
+    &--sub{
+      font-size: 1.4rem;
+      margin-top: 14.68px;
+      margin-bottom: 32.55px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.flex{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex_column{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.position_center{
+  left:50%;
+  top:50%;
+  transform:translateX(-50%) translateY(-50%);
+}

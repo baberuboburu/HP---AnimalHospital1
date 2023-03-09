@@ -1,0 +1,15 @@
+<% menu_img = {
+  txt1 : '../asset/images/menu_staff.png',
+  txt2 : '../asset/images/menu_medical.png',
+  txt3 : '../asset/images/menu_about.png',
+  txt4 : '../asset/images/menu_access.png',
+  txt5 : '../asset/images/menu_reqruit.png'
+} %>
+
+<section class="l-menu">
+  <% for(var i in menu_img){ %>
+    <a href="" class="l-menu__img">
+      <img alt="none" src=<%- menu_img[i] %>>
+    </a>
+  <% } %>
+</section>

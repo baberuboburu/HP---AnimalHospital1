@@ -1,0 +1,39 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.c-button{
+  position: relative;
+  width: 233.99px;
+  height: 47px;
+  background-color: bp.$yellow;
+  @extend .flex;
+  justify-content: center;
+  border-radius: 100vh;
+  &__txt{
+    @extend .font_brown2;
+    font-size: 1.6rem;
+    z-index: 1;
+  }
+}
+
+.c-button__topsp{
+  position: relative;
+  width: 326.03px;
+  height: 70.99px;
+  background-color: bp.$yellow;
+  @extend .flex_column;
+  justify-content: center;
+  border-radius: 1vh;
+  box-shadow:0px 1px 10px 1px grey;
+  &__txt{
+    @extend .font_brown2;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    z-index: 1;
+    &--sub{
+      @extend .font_brown2;
+      font-size: 1.0rem;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+  }
+}

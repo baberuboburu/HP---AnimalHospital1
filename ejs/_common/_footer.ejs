@@ -1,0 +1,121 @@
+<% footer = {
+  txt1 : '〒522-0025  滋賀県彦根市野田山町1058-1',
+  txt2 : 'Tel 0749-26-2528',
+  txt3 : '※ 受付時間は、午前 : 11:45・午後 : 19:15となります。',
+  txt4 : '※ 火曜日と祝日午後は休診です。',
+  txt5 : '※ ▲:日曜の午後は６時までの診療になります。',
+  txt6 : '※ 8月～2月の日曜午後は不定期診療となります。',
+  txt7 : '2020年7月より診察は予約制になります。受付時間は診察終了の15分前になります。<br><br>時間外や休診日診療に関しては、お電話にて確認後、可能であれば診察させていただきます。<br><br>連絡が取れない場合は、申し訳ございませんが、夜間動物病院等での受診をお願いいたします。',
+  txt8 : 'SITE MAP',
+  txt9 : 'Copyright 2022 野田山動物病院',
+  btn : 'WEB予約受付'
+} %>
+<% footer_menu = {
+  txt1 : '  ▶︎  スタッフ紹介',
+  txt2 : '  ▶︎  診療案内',
+  txt3 : '  ▶︎  院内設備',
+  txt4 : '  ▶︎  アクセス',
+  txt5 : '  ▶︎  求人募集'
+} %>
+<% footer_menu_href = {
+  url1 : '',
+  url2 : '',
+  url3 : '',
+  url4 : '',
+  url5 : ''
+} %>
+<% footer_about = {
+  txt1 : ' - 整形外科',
+  txt2 : ' - 歯科',
+  txt3 : ' - 健康診断',
+  txt4 : ' - 予防'
+} %>
+<% footer_about_href = {
+  url1 : '',
+  url2 : '',
+  url3 : '',
+  url4 : '',
+  url5 : ''
+} %>
+<% var footer_ad = [
+  {url:'',img:'../asset/images/Line.png'},
+  {url:'',img:'../asset/images/staffblog.png'},
+  {url:'',img:'../asset/images/oasis.png'},
+  {url:'',img:'../asset/images/swingtails.png'}
+] %>
+ </main>
+    <footer class="l-footer">
+      <div class="l-footer__ad">
+        <div class="l-footer__ad__left">
+          <a href="" class="l-footer__ad__left__facebook">
+            <img src="../asset/images/facebook.png" alt="none">
+          </a>
+        </div>
+        <div class="l-footer__ad__right">
+          <% for(var i=0; i<footer_ad.length; i++){ %>
+            <a class="l-footer__ad__right__link" href=<%- footer_ad[i].url %>>
+              <img alt="none" src=<%- footer_ad[i].img %>>
+            </a>
+          <% } %>
+        </div>
+        <div class="l-footer__ad__animals">
+          <img src="../asset/images/animals.png" alt="none">
+        </div>
+      </div>
+      <div class="l-footer__green">
+        <div class="l-footer__green__left">
+          <a href="" class="l-footer__green__left__logo">
+            <img src="../asset/images/logo_white.png" alt="none">
+          </a>
+          <div class="l-footer__green__left__txt">
+            <p class="l-footer__green__left__txt__p"><%- footer.txt1 %></p>
+            <p class="l-footer__green__left__txt__p--tel"><%- footer.txt2 %></p>
+          </div>
+          <div class="l-footer__green__left__btn">
+            <a href="" class="c-button">
+              <p class="c-button__txt"><%- footer.btn %></p>
+            </a>
+          </div>
+          <div class="c-schedule">
+            <img src="../asset/images/schedule.png" alt="none">
+            <div class="c-schedule__txt">
+              <p><%- footer.txt3 %></p>
+              <p><%- footer.txt4 %></p>
+              <p><%- footer.txt5 %></p>
+              <p><%- footer.txt6 %></p>
+            </div>
+          </div>
+          <div class="l-footer__green__left__attention"><%- footer.txt7 %></div>
+        </div>
+        <div class="l-footer__green__right">
+          <div class="l-footer__green__right__txt">
+            <p class="l-footer__green__right__txt__p"><%- footer.txt8 %></p>
+            <br>
+            <ul class="l-footer__green__right__txt__list">
+              <% for(var i in footer_menu){ %>
+                <% if(footer_menu[i]=='  ▶︎  診療案内'){ %>
+                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu_href[i] %>><%- footer_menu[i] %></a>
+                  <br>
+                  <% for(var j in footer_about){ %>
+                    <li class="l-footer__green__right__txt__list__li">
+                      <a class="l-footer__green__right__txt__list__a" href=<%- footer_about_href[j] %>><%- footer_about[j] %></a>
+                    </li>
+                    <br>
+                  <% } %>
+                  <br><br>
+                <% }else{ %>
+                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu_href[i] %>><%- footer_menu[i] %></a>
+                  <br><br>
+                <% } %>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__black">
+        <p class="l-footer__black__p"><%- footer.txt9 %></p>
+      </div>
+    </footer>
+    <script src="../asset/js/menu.js"></script>
+  </body>
+</html>

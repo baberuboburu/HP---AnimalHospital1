@@ -1,0 +1,21 @@
+{
+  "name": "files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ejs": "ejs-cli --base-dir ejs/ 'index.ejs' --out dest/",
+    "watch": "chokidar \"ejs/\" -c \"npm run ejs\" --initial"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "ejs-cli": "^2.2.3"
+  }
+}

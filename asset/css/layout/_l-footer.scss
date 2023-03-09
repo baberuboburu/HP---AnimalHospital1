@@ -1,0 +1,107 @@
+@use "./../foundation/_mixin.scss" as bp;
+
+.l-footer{
+  &__ad{
+    width: 100%;
+    height: 1019px;
+    padding: 0 100px;
+    background-image: url('../images/top_cal_bg.png');
+    background-size: cover;
+    position: relative;
+    @extend .flex;
+    &__right{
+      height: 685px;
+      @extend .flex_column;
+      align-content: space-between;
+    }
+    &__animals{
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+  &__green{
+    height: 962px;
+    padding:0 100px;
+    @extend .flex;
+    background-color: #014715;
+    &__left{
+      position: relative;
+      width:50%;
+      height:100%;
+      padding-left: 10px;
+      padding-top: 135px;
+      text-align: left;
+      &__logo{
+        display: inline-block;
+        width: 350px;
+      }
+      &__txt{
+        @extend .font_white;
+        margin-top: 40.64px;
+        &__p{
+          @extend .font_m;
+          font-size: 1.6rem;
+          &--tel{
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin-top: 12.65px;
+            margin-bottom: 50.61px;
+          }
+        }
+      }
+      &__btn{
+        position: absolute;
+        top: 292px;;
+        right:0;
+      }
+      &__attention{
+        @extend .font_white;
+        font-size: 1.5rem;
+        width:532px;
+        margin-top: 26.61px;
+      }
+    }
+    &__right{
+      width:50%;
+      &__txt{
+        width: 296.31px;
+        margin-left: auto;
+        margin-right: auto;
+        &__p{
+          @extend .font_white;
+          font-size: 2.4rem;
+          text-align: left;
+        }
+        &__list{
+          text-align: left;
+          margin-left:30px;
+          &__a{
+            @extend .font_white;
+            font-size: 1.6rem;
+            display: block;
+          }
+          &__li{
+            margin-left: 30px;
+            &__a{
+              @extend .font_white;
+              font-size: 1.6rem;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__black{
+    @extend .flex;
+    justify-content: center;
+    width:100%;
+    height:42px;
+    background-color: #323232;
+    &__p{
+      @extend .font_white;
+      font-size: 1.2rem;
+    }
+  }
+}

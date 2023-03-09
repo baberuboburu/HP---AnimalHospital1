@@ -1,0 +1,280 @@
+<% news = {
+  txt1 : 'お知らせ',
+  txt2 : 'NEWS',
+  txt3 : 'ー　感染対策５つのお願い　ー',
+  txt4 : '2022.05.05',
+  txt5 : '5月休診日のお知らせ',
+  txt6 : 'お知らせ一覧へ'
+} %>
+<% open = {
+  txt1 : '診療時間',
+  txt2 : 'OPENING HOURS',
+  txt3 : '※ 受付時間は、午前 : 11:45・午後 : 19:15となります。',
+  txt4 : '※ 火曜日と祝日午後は休診です。',
+  txt5 : '※ ▲:日曜の午後は６時までの診療になります。',
+  txt6 : '※ 8月～2月の日曜午後は不定期診療となります。',
+  txt7 : '2020年7月より診察は予約制になります。受付時間は診察終了の15分前になります。<br><br>時間外や休診日診療に関しては、お電話にて確認後、可能であれば診察させていただきます。<br><br>連絡が取れない場合は、申し訳ございませんが、夜間動物病院等での受診をお願いいたします。'
+} %>
+<% news_main = {
+  1 : '来院は、大人一人お願いします。',
+  2 : '診察の方はお車でお待ちください。',
+  3 : '手指の消毒をお願いいたします。',
+  4 : '発熱、咳症状のある方は、来院をお控えください。',
+  5 : '病院内に入るときは、マスクをご着用ください。',
+} %>
+<% feat = {
+  txt1 : '野田山動物病院の特徴',
+  txt2 : 'FEATURE',
+  txt3 : 'テキストテキスト<br>テキストテキストテキストテキスト<br>テキストテキスト<br>テキストテキストテキストテキストテキストテキスト<br><br>テキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+  txt4 : '治療対象どうぶつ'
+} %>
+<% var feat_cards = [
+  {url:'',img:'../asset/images/top_feat_1.png',main:'整形外科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'',img:'../asset/images/top_feat_2.png',main:'歯科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'',img:'../asset/images/top_feat_3.png',main:'健康診断について' , sub:'テキストテキストテキストテキスト'},
+  {url:'',img:'../asset/images/top_feat_4.png',main:'予防について' , sub:'テキストテキストテキストテキスト'}
+] %>
+<% var feat_animals = [
+  {img:'../asset/images/top_feat_right_1.png',name:'犬'},
+  {img:'../asset/images/top_feat_right_2.png',name:'猫'},
+  {img:'../asset/images/top_feat_right_3.png',name:'うさぎ'},
+  {img:'../asset/images/top_feat_right_4.png',name:'ハムスター'}
+] %>
+<% cal = {
+  txt1 : '診療カレンダー',
+  txt2 : 'CALENDAR'
+} %>
+<% reserve = {
+  txt1 : 'ご予約・お問い合わせ',
+  txt2 : 'RESERVE',
+  txt3 : '当院では待ち時間のご負担を軽減するために、時間帯予約制をおこなっております。',
+  txt4 : '時間帯予約制とは',
+  txt5 : '「○時○分ピッタリに診療を開始します」という完全予約制ではなく、30分単位の診療枠に複数の患者様の予約を受け、診療をいたします。<br><br>10:00～10:30枠にご予約の患者様は、9:55～10:00を目安に受付をお願いします。<br>受付後、10:00～10:30の間に診察室にご案内させていただきます。<br>なお、診察室に及びする順番は、診療内容により受付された順番と異なる場合がございます。<br>あらかじめご了承ください。',
+  txt6 : '時間帯予約はこちら',
+  txt7 : 'Web予約受付',
+  txt8 : 'お問い合わせはこちら',
+  txt9 : '0749-26-2528'
+} %>
+<% topaccess = {
+  txt1 : '当院へのアクセス',
+  txt2 : 'ACCESS',
+  txt3 : '〒522-0025  滋賀県彦根市野田山町1058-1',
+  txt4 : '駐車場についてはこちら'
+} %>
+
+<section class="l-news">
+  <div class="l-news__sp">
+    <div class="c-bg__yellow">
+      <div class="p-corona">
+        <p class="p-corona__please"><%- news.txt3 %></p>
+        <% for(var i in news_main){ %>
+          <li class="p-corona__list">
+            <div class="p-corona__list__index">
+              <div class="p-corona__list__index__round"></div>
+              <p class="p-corona__list__index__number"><%- i %></p>
+            </div>
+            <p class="p-corona__list__p"><%- news_main[i] %></p>
+          </li>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <div class="l-news__left">
+    <div class="c-bg__white c-bg__716">
+        <div class="c-ttl">
+          <p class="c-ttl__main"><%- news.txt1 %></p>
+          <p class="c-ttl__sub"><%- news.txt2 %></p>
+        </div>
+        <div class="l-news__left__main">
+          <div class="c-bg__yellow">
+            <div class="p-corona">
+              <p class="p-corona__please"><%- news.txt3 %></p>
+              <% for(var i in news_main){ %>
+                <li class="p-corona__list">
+                  <div class="p-corona__list__index">
+                    <div class="p-corona__list__index__round"></div>
+                    <p class="p-corona__list__index__number"><%- i %></p>
+                  </div>
+                  <p class="p-corona__list__p"><%- news_main[i] %></p>
+                </li>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <div class="l-news__left__list">
+          <div class="c-list">
+            <% for(var i=0; i<3; i++){ %>
+              <li class="c-list__li">
+                <div class="c-list__li__txt">
+                  <span class="c-list__li__txt__span"><%- news.txt4 %></span>
+                  <span><%- news.txt5 %></span>
+                </div>
+                <div class="c-list__dashed">
+                  <img src="../asset/images/top_news_dashed.png" alt="none">
+                </div>
+            </li>
+            <% } %>
+          </div>
+        </div>
+        <div class="l-news__left__more">
+          <div class="l-news__left__more__box">
+            <a href="" class="l-news__left__more__box__link">
+              <p class="l-news__left__more__box__link__p"><%- news.txt6 %></p>
+              <div class="l-news__left__more__box__link__arrow">
+                <div class="l-news__left__more__box__link__arrow__bg"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="l-news__left__img">
+          <img src="../asset/images/top_news.png" alt="none">
+        </div>
+    </div>
+  </div>
+  <div class="l-news__right">
+    <div class="c-schedule c-schedule__long">
+      <div class="c-ttl">
+        <p class="c-ttl__main"><%- open.txt1 %></p>
+        <p class="c-ttl__sub"><%- open.txt2 %></p>
+        <div class="l-news__right__margin"></div>
+      </div>
+      <img src="../asset/images/schedule.png" alt="none">
+      <div class="c-schedule__txt">
+        <p><%- open.txt3 %></p>
+        <p><%- open.txt4 %></p>
+        <p><%- open.txt5 %></p>
+        <p><%- open.txt6 %></p>
+      </div>
+      <div class="c-schedule__topimg">
+        <img src="../asset/images/top_schedule.png" alt="none">
+      </div>
+    </div>
+    <div class="l-news__right__attention"><%- open.txt7 %></div>
+  </div>
+  <div class="l-news__grass1">
+    <img src="../asset/images/grass_white.png" alt="none">
+  </div>
+  <div class="l-news__grass2">
+    <img src="../asset/images/grass_white.png" alt="none">
+  </div>
+</section>
+
+<section class="l-feat">
+  <div class="c-ttl">
+    <p class="c-ttl__main"><%- feat.txt1 %></p>
+    <p class="c-ttl__sub"><%- feat.txt2 %></p>
+  </div>
+  <div class="l-feat__box">
+    <div class="l-feat__box__left">
+      <p class="l-feat__box__left__p"><%- feat.txt3 %></p>
+    </div>
+    <div class="l-feat__box__right">
+      <div class="l-feat__box__right__animals">
+        <div class="c-bg__yellow">
+          <p class="l-feat__box__right__animals__p"><%- feat.txt4 %></p>
+          <ul class="l-feat__box__right__animals__ul">
+            <% for(var i=0; i<feat_animals.length; i++){ %>
+              <li class="l-feat__box__right__animals__ul__li">
+                <div class="l-feat__box__right__animals__ul__li__img">
+                  <img alt="none" src=<%- feat_animals[i].img %>>
+                </div>
+                <p class="l-feat__box__right__animals__ul__li__p"><%= feat_animals[i].name %></p>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-feat__imgs">
+    <div class="l-feat__imgs__cards">
+      <% for(var i=0; i<feat_cards.length; i++){ %>
+        <a href="" class="c-card">
+          <div class="c-card__img">
+            <img alt="none" src=<%- feat_cards[i].img %>>
+          </div>
+          <div class="c-card__txt">
+            <p class="c-card__txt--main"><%= feat_cards[i].main %></p>
+            <p class="c-card__txt--sub"><%= feat_cards[i].sub %></p>
+          </div>
+        </a>
+      <% } %>
+    </div>
+  </div>
+  <div class="l-feat__margin"></div>
+</section>
+
+<section class="l-cal">
+  <div class="c-ttl">
+    <p class="c-ttl__main"><%- cal.txt1 %></p>
+    <p class="c-ttl__sub"><%- cal.txt2 %></p>
+  </div>
+  <div class="l-cal__calender">
+    <div class="l-cal__calender__img">
+      <img src="../asset/images/top_cal.png" alt="none">
+      <div class="l-cal__calender__img__illust">
+        <img src="../asset/images/top_cal_img.png" alt="none">
+      </div>
+    </div>
+  </div>
+  <div class="l-cal__grass--1">
+    <img src="../asset/images/grass_green.png" alt="none">
+  </div>
+  <div class="l-cal__grass--2">
+    <img src="../asset/images/grass_green.png" alt="none">
+  </div>
+</section>
+
+<section class="l-reserve">
+  <div class="c-ttl c-ttl__white">
+    <p class="c-ttl__main"><%- reserve.txt1 %></p>
+    <p class="c-ttl__sub"><%- reserve.txt2 %></p>
+  </div>
+  <p class="l-reserve__p"><%- reserve.txt3 %></p>
+  <div class="l-reserve__what">
+    <div class="c-bg__yellow">
+      <p class="l-reserve__what--main"><%- reserve.txt4 %></p>
+      <p class="l-reserve__what--sub"><%- reserve.txt5 %></p>
+    </div>
+  </div>
+  <p class="l-reserve__guide"><%- reserve.txt6 %></p>
+  <div class="l-reserve__btn">
+    <a href="" class="c-button">
+      <p class="c-button__txt"><%- reserve.txt7 %></p>
+    </a>
+  </div>
+  <div class="l-reserve__contact">
+    <p class="l-reserve__contact--p"><%- reserve.txt8 %></p>
+    <p class="l-reserve__contact--tel"><%- reserve.txt9 %></p>
+  </div>
+  <div class="l-reserve--tree1">
+    <img src="../asset/images/top_reserve_tree1.png" alt="none">
+  </div>
+  <div class="l-reserve--tree2">
+    <img src="../asset/images/top_reserve_tree2.png" alt="none">
+  </div>
+</section>
+
+<section class="l-topaccess">
+  <div class="l-topaccess__ttl">
+    <div class="c-ttl">
+      <p class="c-ttl__main"><%- topaccess.txt1 %></p>
+      <p class="c-ttl__sub"><%- topaccess.txt2 %></p>
+    </div>
+    <div class="l-topaccess__ttl__img">
+      <img src="../asset/images/top_access_illust.png" alt="none">
+    </div>
+  </div>
+
+  <div class="l-topaccess__btn">
+    <p class="l-topaccess__btn__address"><%- topaccess.txt3 %></p>
+    <a href="" class="c-button">
+      <p class="c-button__txt"><%- topaccess.txt4 %></p>
+    </a>
+  </div>
+  <div class="l-topaccess__map">
+    <div class="c-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.329348760994!2d136.27449921512596!3d35.24806138029754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003d47ccf6ebdf9%3A0x8155c61522122309!2z44CSNTIyLTAwMjUg5ruL6LOA55yM5b2m5qC55biC6YeO55Sw5bGx55S677yR77yQ77yV77yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1678324615254!5m2!1sja!2sjp" width="1500" height="467.84" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>

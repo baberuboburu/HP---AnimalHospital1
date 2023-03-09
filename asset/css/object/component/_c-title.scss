@@ -1,0 +1,17 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.c-ttl{
+  @extend .font_brown2;
+  font-weight: 300;
+  text-align: center;
+  &.c-ttl__white{
+    color: white;
+  }
+  &__main{
+    font-size: 2.0rem;
+  }
+  &__sub{
+    font-size: 1.1rem;
+    margin-top: 18.32px;
+  }
+}
