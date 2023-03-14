@@ -1,0 +1,70 @@
+<% health = {
+  txt1 : '診察案内',
+  txt2 : 'Medical Check',
+  txt3 : '動物たちは、最初の１年間で人間でいうと中学生くらいまで成長をします。その後、人間よりも４～５倍以上の速度で年を重ねていきます。<br>小型犬や猫の場合、７歳以上になるとシニア世代になります。<br>このように気が付かないうちに高齢になるため、動物たちの異常に気付いてあげられないことがあります。<br>健康診断は、健康であることを確認する目的でシニア期に入ると年に１回以上はされることをお勧めいたします。',
+  txt4 : '料金',
+  txt5 : '¥0,000～',
+  txt6 : '小型犬は特に１０歳以上になると僧房弁閉鎖不全症を発症しやすく、適切なタイミングで治療を開始しないと治療が間に合わない、ということもあります。<br>また、キャバリア、チワワは特殊な犬種のため、６歳くらいの早期に心不全の症状を発症することもあるため早い段階での検査をお勧めいたします。<br>ハートドックの検査内容は、レントゲン検査、心電図、超音波検査をセットにして総合的に判断いたします。<br>この検査により、心臓不全の進行度をモニタリングすることにより、治療薬の選択を考えます。'
+} %>
+<% health_corse = ['一般検査（ベーシック）' , 'プレミアムコース  半日入院' , 'ハートドック（心臓  半日入院'] %>
+<% health_array1 = ['身体検査' , '血液検査' , '尿検査' , '便検査'] %>
+<% health_array2 = ['身体検査' , '血液検査' , '尿検査' , '便検査' , 'レントゲン検査' , 'エコー検査'] %>
+<% health_array3 = ['レントゲン検査' , 'エコー検査' , '心電図'] %>
+
+
+<section class="p-pageTop p-pageTop__health">
+  <div class="p-pageTop__txt">
+    <p class="p-pageTop__txt--main"><%- health.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- health.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-health">
+  <div class="l-health__growup">
+    <div class="c-bg__yello">
+      <div class="l-health__growup__fb">
+        <div class="l-health__growup__fb__img">
+          <img src="../asset/images/health_illust.png" alt="none">
+        </div>
+        <p class="l-health__growup__fb__txt"><%- health.txt3 %></p>
+      </div>
+    </div>
+  </div>
+  <% for(var i=0; i<health_corse.length; i++){ %>
+    <div class="l-health__pkg">
+      <div class="l-health__pkg__box">
+        <div class="l-health__pkg__box__label">
+          <p class="l-health__pkg__box__label__p"><%- health_corse[i] %></p>
+        </div>
+        <div class="l-health__pkg__box__main">
+          <div class="l-health__pkg__box__main__price">
+            <div class="">
+              <p class=""><%- health.txt4 %></p>
+            </div>
+            <p class="l-health__pkg__box__main__price__free"><%- health.txt5 %></p>
+          </div>
+          <ul class="l-health__pkg__box__main__list">
+            <% var num = 0 %>
+            <% var array = [] %>
+            <% if(i==0){
+              num = 4;
+              array = health_array1;
+            }if(i==1){
+              num = 6;
+              array = health_array2;
+            }else{
+              num = 3;
+              array = health_array3;
+            } %>
+            <% for(var j=0; j<num; j++){ %>
+              <div class="l-health__pkg__box__main__list__box">
+                <p class="l-health__pkg__box__main__list__box__p"><%- array[j] %></p>
+              </div>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+      <div class="l-health__pkg__txt"><%- health.txt6 %></div>
+    </div>
+  <% } %>
+</section>

@@ -1,5 +1,17 @@
 @use "./../../foundation/_mixin.scss" as bp;
 
 .c-map{
-  
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &.c-map__accsess{
+    width: 100%;
+  }
+  & iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

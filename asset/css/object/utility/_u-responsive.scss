@@ -1,0 +1,14 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.u-nonePC{
+  display: none;
+}
+
+@include bp.breakpoint(tablet){
+  .u-onlyPC{
+    display: none;
+  }
+  .u-nonePC{
+    display: block;
+  }
+}

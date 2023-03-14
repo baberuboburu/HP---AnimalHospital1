@@ -1,0 +1,95 @@
+@use "./../../foundation/_mixin.scss" as bp;
+
+.p-pageTop{
+  width: 100%;
+  height: 208px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  @extend .flex;
+  justify-content: center;
+  &.p-pageTop__staff{
+    background-image: url('../images/pageTop_staff.png');
+    background-position: 100% 0;
+  }
+  &.p-pageTop__medical{
+    background-image: url('../images/pageTop_medical.png');
+    background-position: 100% 0;
+  }
+  &.p-pageTop__about{
+    background-image: url('../images/pageTop_about.png');
+  }
+  &.p-pageTop__access{
+    background-image: url('../images/pageTop_access.png');
+    background-position: 0 0;
+  }
+  &.p-pageTop__reqruit{
+    background-image: url('../images/pageTop_reqruit.png');
+    background-position: 0 0;
+  }
+  &.p-pageTop__health{
+    background-image: url('../images/pageTop_health.png');
+  }
+  &.p-pageTop__prevention{
+    background-image: url('../images/pageTop_prevention.png');
+    background-position: 100% 0;
+  }
+  &.p-pageTop__tooth{
+    background-image: url('../images/pageTop_tooth.png');
+    background-position: 0 0;
+  }
+  &::after{
+    content: '';
+    width: 100%;
+    height: 208px;
+    background-color: #FFFBED;
+    opacity: 0.33;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__txt{
+    color: bp.$brown2;
+    &.p-pageTop__txt__white{
+      color: white;
+    }
+    &--main{
+      @extend .font;
+      font-size: 3.2rem;
+    }
+    &--sub{
+      @extend .font_m;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include bp.breakpoint(sp){
+  .p-pageTop{
+    height: 140.94px;
+
+    &.p-pageTop__staff{
+      background-image: url('../images/pageTop_staff_sp.png');
+    }
+    &.p-pageTop__about{
+      background-image: url('../images/pageTop_about_sp.png');
+    }
+    &.p-pageTop__health{
+      background-image: url('../images/pageTop_health_sp.png');
+    }
+    &.p-pageTop__tooth{
+      background-image: url('../images/pageTop_tooth_sp.png');
+    }
+    &::after{
+      content: '';
+      width: 100%;
+      height: 140.94;
+      background-color: #FFFBED;
+      opacity: 0.33;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

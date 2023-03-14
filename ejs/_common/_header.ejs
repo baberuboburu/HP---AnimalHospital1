@@ -8,16 +8,16 @@
   txt6 : 'Menu'
 } %>
 <% var header_menu = [
-  {href:'' , txt:'スタッフ紹介'},
-  {href:'' , txt:'診療案内'},
-  {href:'' , txt:'院内設備'},
-  {href:'' , txt:'アクセス'}
+  {href:'../staff/staff.html' , txt:'スタッフ紹介'},
+  {href:'../health/health.html' , txt:'診療案内'},
+  {href:'../about/about.html' , txt:'院内設備'},
+  {href:'../access/access.html' , txt:'アクセス'}
 ] %>
 <% var header_menu_about = [
   {href:'' , txt:' - 整形外科'},
-  {href:'' , txt:' - 歯科'},
-  {href:'' , txt:' - 健康診断'},
-  {href:'' , txt:' - 予防'}
+  {href:'../tooth/tooth.html' , txt:' - 歯科'},
+  {href:'../medical/medical.html' , txt:' - 健康診断'},
+  {href:'../prevention/prevention.html' , txt:' - 予防'}
 ] %>
 <html lang="ja">
   <head>
@@ -39,7 +39,7 @@
   </head>
   <body>
     <header class="l-header">
-      <a href="" class="l-header__logo">
+      <a href="../index.html" class="l-header__logo">
         <div class="l-header__logo__img">
             <img class="l-header__logo__img--pc" src="../asset/images/logo.png" alt="none">
             <img class="l-header__logo__img--sp" src="../asset/images/logo_sp.png" alt="none">

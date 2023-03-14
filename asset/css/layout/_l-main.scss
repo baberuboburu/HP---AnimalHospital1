@@ -2,22 +2,30 @@
 
 // fv
 .l-fv{
-  height: 488.84px;
+  height: auto;
   margin-top: 36.42px;
   position: relative;
   overflow: hidden;
   &__dog{
     position:relative;
     height:100%;
-    transform:translateX(2.5%);
+    width: 100%;
     &__img{
-      overflow: hidden;
-      &__opacity{
+      width: 100%;
+      & img{
+        width: 100%;
+      }
+      &::after{
         content: "";
         position:absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
         top:0;
         left:0;
         z-index:2;
+        background-color: #454545;
+        opacity: 0.26;
       }
     }
     &__txt{
@@ -59,9 +67,22 @@
   @extend .flex;
   height:130px;
   justify-content: center;
-  &__img{
+  &__a{
     display: inline-block;
-    margin:0 20px;
+    margin:0 50.66px;
+    &__txt{
+      color: bp.$brown2;
+      &--main{
+        @extend .font;
+        font-size: 1.4rem;
+        margin-top: 3px;
+      }
+      &--sub{
+        @extend .font_m;
+        font-size: 1.0rem;
+        margin-top: 3px;
+      }
+    }
   }
 }
 
@@ -95,7 +116,7 @@
   @extend .flex;
   height: 975px;
   background-color: #33593A;
-  padding:0 100px;
+  padding:0 13px;
   padding-top: 96px;
   position: relative;
   &__sp{
@@ -222,7 +243,6 @@
     @extend .flex;
     margin-top: 107.42px;
     margin-bottom: 81.86px;
-    padding:0 100px;
     &__left{
       width: 50%;
       padding-right: 12.74px;
@@ -236,7 +256,8 @@
     &__right{
       width: 50%;
       @extend .flex;
-      justify-content: center;
+      justify-content: flex-end;
+      padding-right: 31.5px;
       &__animals{
         width: 495px;
         height: 176px;
@@ -246,6 +267,7 @@
         }
         &__ul{
           @extend .flex;
+          align-items: flex-end;
           width: 100%;
           margin-top: 13.3px;
           padding: 0 60.5px;
@@ -405,12 +427,15 @@
 
 
 
-@include bp.breakpoint(sp){
+@include bp.breakpoint(tablet){
   .l-fv{
+    width: 100%;
     height: 284.97px;
     margin-top: 0;
     background-image: url('../images/fv_dog_sp.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
     &::before{
       content: '';
       display: block;
@@ -423,10 +448,7 @@
       opacity: 0.26;
     }
     &__dog{
-      transform:none;
-      &__img{
-        display: none;
-      }
+      width: 100%;
       &__txt{
         &__p{
           font-size: 2.0rem;
@@ -463,12 +485,259 @@
   }
   .l-news{
     display: block;
+    height: auto;
     padding: 44px 0 0 0;
     &__sp{
       display: block;
       width: 93.6%;
       margin-left: auto;
       margin-right: auto;
+      &__news{
+        margin-top: 86.1px;
+        &__margin{
+          width: 100%;
+          height: 48.76px;
+        }
+        &__more{
+          margin-top: 24.01px;
+          &__box{
+            &__link{
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              &__p{
+                font-size: 1.6rem;
+                color: white;
+              }
+              &__arrow{
+                height: 10px;
+                transform: translateX(-3px) translateY(8px);
+                &__bg{
+                  position: relative;
+                  width: 33px;
+                  height: 1px;
+                  background-color: #977625;
+                  &::after{
+                    content: '';
+                    position: absolute;
+                    top: -100%;
+                    right: 0;
+                    width: 5.657px;
+                    height: 1px;
+                    transform: rotate(45deg);
+                    background-color: #977625;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &__hours{
+        position: relative;
+        margin-top: 63.19px;
+        padding-bottom: 41.56px;
+        &__topbox{
+          height: 122px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &__img{
+            position: absolute;
+            width: 148px;
+            height: 124px;
+            left: 7px;
+            top: 0;
+          }
+        }
+        &__attention{
+          font-family: 'KozGoPr6N-Regular';
+          color: white;
+          font-size: 1.2rem;
+          width:100%;
+          margin-top: 26.61px;
+        }
+      }
+    }
+    &__left{
+      display: none;
+    }
+    &__right{
+      display: none;
+    }
+    &__grass1,&__grass2{
+      display: none;
+    }
+  }
+  .l-feat{
+    &__box{
+      display: block;
+      margin-top: 45.7px;
+      margin-bottom: 81.86px;
+      padding:0 30.39px;
+      &__left{
+        width: 100%;
+        padding-right: 0px;
+        &__p{
+          font-size: 1.2rem;
+          font-family: 'KozGoPr6N-Regular';
+          line-height: 1.8;
+
+        }
+      }
+      &__right{
+        width: 100%;
+        margin-top: 39px;
+        justify-content: center;
+        padding-right: 0;
+        &__animals{
+          &__ul{
+            padding: 0 33px;
+            &__li{
+              font-size: 1.242rem;
+              font-weight: light;
+            }
+          }
+        }
+      }
+    }
+    &__imgs{
+      background-color: white;
+      padding: 31px 0;
+      &__cards{
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &__margin{
+      width: 100%;
+      height: 62.6px;
+      background-color: white;
+    }
+  }
+  .l-cal{
+    padding-top: 70.82px;
+    padding-bottom: 33px;
+    &__calender{
+      &__img{
+        width: 314px;
+        height: 324px;
+        &__img{
+          width: 100%;
+        }
+        &__illust{
+          width: 88px;
+          height: 74px;
+          top: -74px;
+          right: 0;
+          &__img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__grass--1,&__grass--2{
+      display: none;
+    }
+  }
+  .l-reserve{
+    padding-bottom: 134.17px;
+    padding: 108.82px 27px 126.95px 27px;
+    &__p{
+      width: 41.9%;
+      min-width: 258.26px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40.86px;
+      margin-bottom: 19.67px;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+    &__what{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      &--main{
+        font-size: 1.6rem;
+      }
+      &--sub{
+        font-size: 1.2rem;
+        margin-top: 24.14px;
+        padding: 0 21px 49.89px 21px;
+      }
+    }
+    &__guide{
+      display: none;
+    }
+    &__btn{
+      margin-top: 87.93px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    &__contact{
+      margin-top: 44.82px;
+      position: relative;
+      z-index: 1;
+      &--p{
+        font-size: 1.804rem;
+      }
+      &--tel{
+        font-size: 2.804rem;
+        font-weight: normal;
+      }
+    }
+    &--tree1{
+      bottom: 0;
+      left: -74px;
+      width: 190px;
+      height: 117px;
+      & img{
+        width: 100%;
+      }
+    }
+    &--tree2{
+      bottom: -5px;
+      right: 17px;
+      width: 70px;
+      height: 76px;
+      & img{
+        width: 100%;
+      }
+    }
+  }
+  .l-topaccess{
+    padding-top: 133.98px;
+    padding-bottom: 72px;
+    &__ttl{
+      position: relative;
+      &__img{
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% + 74.985px);
+      }
+    }
+    &__btn{
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+      margin-top: 0px;
+      margin-bottom: 43.9px;
+      &__address{
+        font-size: 1.2rem;
+        margin: 35.35px 0 15.52px 0;
+        letter-spacing: 1px;
+      }
+    }
+    &__map{
+      height: 53vw;
     }
   }
 }
+
+
+
+
+
+
+

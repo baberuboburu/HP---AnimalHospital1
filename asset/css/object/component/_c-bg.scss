@@ -8,7 +8,27 @@
   position: relative;
   @extend .flex_column;
   justify-content: center;
+  min-width: 330px;
+  &.c-bg__block{
+    display: block;
+  }
 }
+
+.c-bg__lightyellow{
+  width: 100%;
+  height: 100%;
+  background-color: #FFFBED;
+  border-radius: 10px;
+  position: relative;
+  @extend .flex_column;
+  justify-content: center;
+  min-width: 450px;
+  padding-bottom: 38.3px;
+  &.c-bg__block{
+    display: block;
+  }
+}
+
 
 .c-bg__white{
   width:100%;

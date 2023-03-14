@@ -29,16 +29,16 @@
   txt4 : '治療対象どうぶつ'
 } %>
 <% var feat_cards = [
-  {url:'',img:'../asset/images/top_feat_1.png',main:'整形外科疾患について' , sub:'テキストテキストテキストテキスト'},
-  {url:'',img:'../asset/images/top_feat_2.png',main:'歯科疾患について' , sub:'テキストテキストテキストテキスト'},
-  {url:'',img:'../asset/images/top_feat_3.png',main:'健康診断について' , sub:'テキストテキストテキストテキスト'},
-  {url:'',img:'../asset/images/top_feat_4.png',main:'予防について' , sub:'テキストテキストテキストテキスト'}
+  {url:'',img:'./asset/images/top_feat_1.png',main:'整形外科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'./tooth/tooth.html',img:'./asset/images/top_feat_2.png',main:'歯科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'./health/health.html',img:'./asset/images/top_feat_3.png',main:'健康診断について' , sub:'テキストテキストテキストテキスト'},
+  {url:'./prevention/prevention.html',img:'./asset/images/top_feat_4.png',main:'予防について' , sub:'テキストテキストテキストテキスト'}
 ] %>
 <% var feat_animals = [
-  {img:'../asset/images/top_feat_right_1.png',name:'犬'},
-  {img:'../asset/images/top_feat_right_2.png',name:'猫'},
-  {img:'../asset/images/top_feat_right_3.png',name:'うさぎ'},
-  {img:'../asset/images/top_feat_right_4.png',name:'ハムスター'}
+  {img:'./asset/images/top_feat_right_1.png',name:'犬'},
+  {img:'./asset/images/top_feat_right_2.png',name:'猫'},
+  {img:'./asset/images/top_feat_right_3.png',name:'うさぎ'},
+  {img:'./asset/images/top_feat_right_4.png',name:'ハムスター'}
 ] %>
 <% cal = {
   txt1 : '診療カレンダー',
@@ -64,7 +64,7 @@
 
 <section class="l-news">
   <div class="l-news__sp">
-    <div class="c-bg__yellow">
+    <div class="c-bg__yellow c-bg__block">
       <div class="p-corona">
         <p class="p-corona__please"><%- news.txt3 %></p>
         <% for(var i in news_main){ %>
@@ -77,6 +77,60 @@
           </li>
         <% } %>
       </div>
+    </div>
+    <div class="l-news__sp__news">
+          <div class="c-ttl">
+            <p class="c-ttl__main"><%- news.txt1 %></p>
+            <p class="c-ttl__sub"><%- news.txt2 %></p>
+          </div>
+          <div class="l-news__sp__news__margin"></div>
+          <div class="l-news__sp__news__list">
+            <div class="c-list">
+              <% for(var i=0; i<3; i++){ %>
+                <li class="c-list__li">
+                  <div class="c-list__li__txt">
+                    <p class="c-list__li__txt__p"><%- news.txt4 %></p>
+                    <p><%- news.txt5 %></p>
+                  </div>
+                  <div class="c-list__dashed">
+                    <img src="./asset/images/top_news_dashed_white.png" alt="none">
+                  </div>
+              </li>
+              <% } %>
+            </div>
+          </div>
+          <div class="l-news__sp__news__more">
+            <div class="l-news__sp__news__more__box">
+              <a href="" class="l-news__sp__news__more__box__link">
+                <p class="l-news__sp__news__more__box__link__p"><%- news.txt6 %></p>
+                <div class="l-news__sp__news__more__box__link__arrow">
+                  <div class="l-news__sp__news__more__box__link__arrow__bg"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+    </div>
+    <div class="l-news__sp__hours">
+      <div class="l-news__sp__hours__topbox">
+        <div class="l-news__sp__hours__topbox__img">
+          <img src="./asset/images/top_news.png" alt="none">
+        </div>
+        <div class="c-ttl">
+          <p class="c-ttl__main"><%- open.txt1 %></p>
+          <p class="c-ttl__sub"><%- open.txt2 %></p>
+          <div class="l-news__sp__hours__topbox__margin"></div>
+        </div>
+      </div>
+      <div class="c-schedule">
+        <img src="./asset/images/schedule.png" alt="none" class="c-schedule__img">
+        <div class="c-schedule__txt">
+          <p class="c-schedule__txt--pc"><%- open.txt3 %></p>
+          <p class="c-schedule__txt--sp"><%- open.txt4 %></p>
+          <p class="c-schedule__txt--sp"><%- open.txt5 %></p>
+          <p class="c-schedule__txt--pc"><%- open.txt6 %></p>
+        </div>
+      </div>
+      <div class="l-news__sp__hours__attention"><%- open.txt7 %></div>
     </div>
   </div>
   <div class="l-news__left">
@@ -106,11 +160,11 @@
             <% for(var i=0; i<3; i++){ %>
               <li class="c-list__li">
                 <div class="c-list__li__txt">
-                  <span class="c-list__li__txt__span"><%- news.txt4 %></span>
-                  <span><%- news.txt5 %></span>
+                  <p class="c-list__li__txt__p"><%- news.txt4 %></p>
+                  <p><%- news.txt5 %></p>
                 </div>
                 <div class="c-list__dashed">
-                  <img src="../asset/images/top_news_dashed.png" alt="none">
+                  <img src="./asset/images/top_news_dashed.png" alt="none">
                 </div>
             </li>
             <% } %>
@@ -127,7 +181,7 @@
           </div>
         </div>
         <div class="l-news__left__img">
-          <img src="../asset/images/top_news.png" alt="none">
+          <img src="./asset/images/top_news.png" alt="none">
         </div>
     </div>
   </div>
@@ -138,7 +192,7 @@
         <p class="c-ttl__sub"><%- open.txt2 %></p>
         <div class="l-news__right__margin"></div>
       </div>
-      <img src="../asset/images/schedule.png" alt="none">
+      <img src="./asset/images/schedule.png" alt="none">
       <div class="c-schedule__txt">
         <p><%- open.txt3 %></p>
         <p><%- open.txt4 %></p>
@@ -146,21 +200,21 @@
         <p><%- open.txt6 %></p>
       </div>
       <div class="c-schedule__topimg">
-        <img src="../asset/images/top_schedule.png" alt="none">
+        <img src="./asset/images/top_schedule.png" alt="none">
       </div>
     </div>
     <div class="l-news__right__attention"><%- open.txt7 %></div>
   </div>
   <div class="l-news__grass1">
-    <img src="../asset/images/grass_white.png" alt="none">
+    <img src="./asset/images/grass_white.png" alt="none">
   </div>
   <div class="l-news__grass2">
-    <img src="../asset/images/grass_white.png" alt="none">
+    <img src="./asset/images/grass_white.png" alt="none">
   </div>
 </section>
 
 <section class="l-feat">
-  <div class="c-ttl">
+  <div class="c-ttl c-ttl__sp__brown2">
     <p class="c-ttl__main"><%- feat.txt1 %></p>
     <p class="c-ttl__sub"><%- feat.txt2 %></p>
   </div>
@@ -189,9 +243,9 @@
   <div class="l-feat__imgs">
     <div class="l-feat__imgs__cards">
       <% for(var i=0; i<feat_cards.length; i++){ %>
-        <a href="" class="c-card">
-          <div class="c-card__img">
-            <img alt="none" src=<%- feat_cards[i].img %>>
+        <a class="c-card c-card__sp__column" href=<%- feat_cards[i].url %>>
+          <div class="c-card__img c-card__sp__column">
+            <img class="c-card__img__img c-card__sp__column" alt="none" src=<%- feat_cards[i].img %>>
           </div>
           <div class="c-card__txt">
             <p class="c-card__txt--main"><%= feat_cards[i].main %></p>
@@ -205,23 +259,23 @@
 </section>
 
 <section class="l-cal">
-  <div class="c-ttl">
+  <div class="c-ttl c-ttl__sp__brown2">
     <p class="c-ttl__main"><%- cal.txt1 %></p>
     <p class="c-ttl__sub"><%- cal.txt2 %></p>
   </div>
   <div class="l-cal__calender">
     <div class="l-cal__calender__img">
-      <img src="../asset/images/top_cal.png" alt="none">
+      <img src="./asset/images/top_cal.png" alt="none" class="l-cal__calender__img__img">
       <div class="l-cal__calender__img__illust">
-        <img src="../asset/images/top_cal_img.png" alt="none">
+        <img src="./asset/images/top_cal_img.png" alt="none" class="l-cal__calender__img__illust__img">
       </div>
     </div>
   </div>
   <div class="l-cal__grass--1">
-    <img src="../asset/images/grass_green.png" alt="none">
+    <img src="./asset/images/grass_green.png" alt="none">
   </div>
   <div class="l-cal__grass--2">
-    <img src="../asset/images/grass_green.png" alt="none">
+    <img src="./asset/images/grass_green.png" alt="none">
   </div>
 </section>
 
@@ -248,21 +302,21 @@
     <p class="l-reserve__contact--tel"><%- reserve.txt9 %></p>
   </div>
   <div class="l-reserve--tree1">
-    <img src="../asset/images/top_reserve_tree1.png" alt="none">
+    <img src="./asset/images/top_reserve_tree1.png" alt="none">
   </div>
   <div class="l-reserve--tree2">
-    <img src="../asset/images/top_reserve_tree2.png" alt="none">
+    <img src="./asset/images/top_reserve_tree2.png" alt="none">
   </div>
 </section>
 
 <section class="l-topaccess">
   <div class="l-topaccess__ttl">
-    <div class="c-ttl">
+    <div class="c-ttl c-ttl__sp__brown2">
       <p class="c-ttl__main"><%- topaccess.txt1 %></p>
       <p class="c-ttl__sub"><%- topaccess.txt2 %></p>
     </div>
     <div class="l-topaccess__ttl__img">
-      <img src="../asset/images/top_access_illust.png" alt="none">
+      <img src="./asset/images/top_access_illust.png" alt="none">
     </div>
   </div>
 

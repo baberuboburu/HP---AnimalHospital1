@@ -1,15 +1,15 @@
-<% menu_img = {
-  txt1 : '../asset/images/menu_staff.png',
-  txt2 : '../asset/images/menu_medical.png',
-  txt3 : '../asset/images/menu_about.png',
-  txt4 : '../asset/images/menu_access.png',
-  txt5 : '../asset/images/menu_reqruit.png'
-} %>
+<% var menu = [
+  {href:'../staff/staff.html' , img:'../asset/images/menu_staff.png'},
+  {href:'../medical/medical.html' , img:'../asset/images/menu_medical.png'},
+  {href:'../about/about.html' , img:'../asset/images/menu_about.png'},
+  {href:'../access/access.html' , img:'../asset/images/menu_access.png'},
+  {href:'../reqruit/reqruit.html' , img:'../asset/images/menu_reqruit.png'}
+] %>
 
 <section class="l-menu">
-  <% for(var i in menu_img){ %>
-    <a href="" class="l-menu__img">
-      <img alt="none" src=<%- menu_img[i] %>>
+  <% for(var i=0; i<menu.length; i++){ %>
+    <a class="l-menu__img" href=<%- menu[i].href %>>
+      <img alt="none" src=<%- menu[i].img %>>
     </a>
   <% } %>
 </section>

@@ -1,0 +1,84 @@
+<% medical = {
+  txt1 : '診察案内',
+  txt2 : 'Medical',
+  txt3 : 'アクセスページ　→',
+  txt4 : '',
+  txt5 : '',
+  txt6 : ''
+} %>
+<% var medical_list = [
+{label:'診療対象' , txt:'イヌ・ネコ・ウサギ・ハムスター'},
+{label:'診療時間' , txt:''},
+{label:'所在地' , txt:'〒522-0025 滋賀県彦根市野田山町1058-1'}
+] %>
+<% var medical_cards = [
+  {url:'',img:'../asset/images/top_feat_1.png',main:'整形外科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'../tooth/tooth.html',img:'../asset/images/top_feat_2.png',main:'歯科疾患について' , sub:'テキストテキストテキストテキスト'},
+  {url:'../health/health.html',img:'../asset/images/top_feat_3.png',main:'健康診断について' , sub:'テキストテキストテキストテキスト'},
+  {url:'../prevention/prevention.html',img:'../asset/images/top_feat_4.png',main:'予防について' , sub:'テキストテキストテキストテキスト'}
+] %>
+
+<section class="p-pageTop p-pageTop__medical">
+  <div class="p-pageTop__txt">
+    <p class="p-pageTop__txt--main"><%- medical.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- medical.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-medical">
+  <div class="c-list__medical">
+    <% for(var i=0; i<medical_list.length; i++){ %>
+      <li class="c-list__medical__li">
+        <div class="c-list__medical__li__txt">
+          <span class="c-list__medical__li__txt__span"><%- medical_list[i].label %></span>
+          <% if(i==0){ %>
+            <span><%- medical_list[i].txt %></span>
+          <% }else if(i==1){ %>
+            <div class="l-madical__schedule">
+              <div class="c-schedule__medical">
+                <img src="../asset/images/schedule.png" alt="none" class="c-schedule__medical__img">
+                <div class="c-schedule__medical__txt">
+                  <p class="c-schedule__medical__txt--pc"><%- footer.txt3 %></p>
+                  <p class="c-schedule__medical__txt--sp"><%- footer.txt4 %></p>
+                  <p class="c-schedule__medical__txt--sp"><%- footer.txt5 %></p>
+                  <p class="c-schedule__medical__txt--pc"><%- footer.txt6 %></p>
+                </div>
+              </div>
+              <div class="l-medical__schedule__img">
+                <img src="../asset/images/medical_illust1.png" alt="none">
+              </div>
+            </div>
+          <% }else{ %>
+            <div class="l-medical__access">
+              <span class="l-medical__access__span"><%- medical_list[i].txt %></span>
+              <a href="../access/access.html" class="c-button__tp">
+                <div class="c-button__tp__txt"><%- medical.txt3 %></div>
+              </a>
+            </div>
+          <% } %>
+        </div>
+        <div class="c-list__dashed">
+          <img src="../asset/images/top_medical_dashed.png" alt="none">
+        </div>
+    </li>
+    <% } %>
+  </div>
+  <div class="l-medical__cards">
+    <% for(var i=0; i<medical_cards.length; i++){ %>
+      <a class="c-card__s c-card__sp__column" href=<%- medical_cards[i].url %>>
+        <div class="c-card__s__img c-card__sp__column">
+          <img  alt="none" src=<%- medical_cards[i].img %>>
+        </div>
+        <div class="c-card__s__txt">
+          <p class="c-card__s__txt--main"><%- medical_cards[i].main %></p>
+          <p class="c-card__s__txt--sub"><%- medical_cards[i].sub %></p>
+        </div>
+      </a>
+    <% } %>
+  </div>
+  <div class="l-medical__illust">
+    <div class="l-medical__illust__img">
+      <img src="../asset/images/medical_illust2.png" alt="none">
+    </div>
+  </div>
+</section>

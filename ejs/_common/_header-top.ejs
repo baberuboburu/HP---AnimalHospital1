@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<% header = {
+  txt1 : '野田山動物病院',
+  txt2 : 'お問い合わせ・ご予約はこちら',
+  txt3 : 'Tel 0749-26-2528',
+  txt4 : 'Web予約は</br>こちら',
+  txt5 : 'RESERVED',
+  txt6 : 'Menu'
+} %>
+<% var header_menu = [
+  {href:'./staff/staff.html' , txt:'スタッフ紹介'},
+  {href:'./health/health.html' , txt:'診療案内'},
+  {href:'./about/about.html' , txt:'院内設備'},
+  {href:'./access/access.html' , txt:'アクセス'}
+] %>
+<% var header_menu_about = [
+  {href:'' , txt:' - 整形外科'},
+  {href:'./tooth/tooth.html' , txt:' - 歯科'},
+  {href:'./medical/medical.html' , txt:' - 健康診断'},
+  {href:'./prevention/prevention.html' , txt:' - 予防'}
+] %>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/app.css" />
+
+    <!-- OGP設定　記載必要 -->
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>サンプル</title>
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <header class="l-header">
+      <a href="./index.html" class="l-header__logo">
+        <div class="l-header__logo__img">
+            <img class="l-header__logo__img--pc" src="./asset/images/logo.png" alt="none">
+            <img class="l-header__logo__img--sp" src="./asset/images/logo_sp.png" alt="none">
+        </div>
+        <p class="l-header__logo__ttl"><%- header.txt1 %></p>
+      </a>
+      <div></div>
+      <div class="l-header__hum" id="menu__btn">
+        <div class="l-header__hum--1"></div>
+        <div class="l-header__hum--2"></div>
+        <div class="l-header__hum--3"></div>
+      </div>
+      <div class="l-header__menu" id="menu">
+        <div class="l-header__menu__ttl">
+          <p class="l-header__menu__ttl__p"><%- header.txt6 %></p>
+          <div class="l-header__menu__ttl__cross" id="menu__btn__cross">
+            <div class="l-header__menu__ttl__cross--1"></div>
+            <div class="l-header__menu__ttl__cross--2"></div>
+          </div>
+        </div>
+        <div class="l-header__menu__line"></div>
+        <ul class="l-header__menu__list">
+          <% for(var i=0; i<header_menu.length; i++){ %>
+            <% if(header_menu[i].txt=='診療案内'){ %>
+              <div class="l-header__menu__list__f">
+                <div class="l-header__menu__list__f__arrow">
+                  <div class="l-header__menu__list__f__arrow__bg"></div>
+                </div>
+                <a class="l-header__menu__list__f__a" href=<%- header_menu[i].href %>><%- header_menu[i].txt %></a>
+              </div>
+              <br><br>
+              <% for(var j=0; j<header_menu_about.length; j++){ %>
+                <li class="l-header__menu__list__li">
+                  <a class="l-header__menu__list__li__a" href=<%- header_menu_about[j].href %>><%- header_menu_about[j].txt %></a>
+                </li>
+                <br>
+                <% } %>
+              <% }else{ %>
+                <br><br>
+                <div class="l-header__menu__list__f">
+                  <div class="l-header__menu__list__f__arrow">
+                    <div class="l-header__menu__list__f__arrow__bg"></div>
+                  </div>
+                  <a class="l-header__menu__list__f__a" href=<%- header_menu[i].href %>><%- header_menu[i].txt %></a>
+                </div>
+                <br><br>
+              <% } %>
+          <% } %>
+        </ul>
+      </div>
+      <div class="l-header__txts">
+        <p class="l-header__txts__p"><%- header.txt2 %></p>
+        <p class="l-header__txts__p--sub"><%- header.txt3 %></p>
+      </div>
+      <a href="" class="l-header__reserve">
+        <div class="l-header__reserve__b">
+          <p class="l-header__reserve__b__p"><%- header.txt4 %></p>
+          <p class="l-header__reserve__b__p--sub"><%- header.txt5 %></p>
+        </div>
+      </a>
+    </header>
+    <main>

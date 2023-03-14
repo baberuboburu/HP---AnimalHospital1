@@ -1,0 +1,98 @@
+<% var about = {
+  txt1 : '院内設備',
+  txt2 : 'ABOUT',
+  txt3 : '施設のご案内',
+  txt4 : 'INSTITUTION',
+  txt5 : '医療機器について',
+  txt6 : 'MEDICAL EQUIPMENT'
+} %>
+<% var about_institution = [
+{url:'../asset/images/about_institution1.png' , txt:'受付'},
+{url:'../asset/images/about_institution2.png' , txt:'待合室'},
+{url:'../asset/images/about_institution3.png' , txt:'第一診察室'},
+{url:'../asset/images/about_institution4.png' , txt:'第二診察室'},
+{url:'../asset/images/about_institution5.png' , txt:'処置室'},
+{url:'../asset/images/about_institution6.png' , txt:'手術室'}
+] %>
+<% var about_middle = [
+{url:'../asset/images/about_middle.png'},
+{url:'../asset/images/about_middle.png'},
+{url:'../asset/images/about_middle.png'}
+] %>
+<% var about_equipment = [
+{url:'../asset/images/about_equipment1.png' , main:'多項目自動血球計算装置' , txt:'血液の細胞（赤血球、白血球、血小板）の数値、濃度を測定。動物のからだに炎症や貧血がないかを迅速に測定します。'},
+{url:'../asset/images/about_equipment2.png' , main:'生化学検査' , txt:'肝酵素（ALT,AST,ALP,GGT)  腎（BUN.CRE）膵臓（LIP)  脂質(コレステロール、中性脂肪）電解質（Na-K-Cl)  CRP（急性炎症蛋白）などを測定することにより、内臓疾患の異常を迅速に見つけることができます。'},
+{url:'../asset/images/about_equipment3.png' , main:'超音波検査（エコー）' , txt:'心臓、腹部の内臓の状態を確認します。'},
+{url:'../asset/images/about_equipment4.png' , main:'レントゲン検査' , txt:'血液の細胞（赤血球、白血球、血小板）の数値、濃度を測定。動物のからだに炎症や貧血がないかを迅速に測定します。'},
+{url:'../asset/images/about_equipment5.png' , main:'デジタルX線画像読取装置' , txt:'手術を行う際に、麻酔の深度をモニターする際に利用します。心電図、血圧、呼吸、体温などを測定することができます。'},
+{url:'../asset/images/about_equipment6.png' , main:'眼圧測定器（トノベット）' , txt:'点眼麻酔の必要もなく、動物に痛みを与えることなく眼圧測定ができます。<br>緑内障の診断とモニターリングには必要な検査機器です。'},
+{url:'../asset/images/about_equipment7.png' , main:'全身麻酔装置' , txt:'麻酔気化および人口呼吸器を兼ね備えた麻酔器システムで従来より安全性を備えております。'},
+{url:'../asset/images/about_equipment8.png' , main:'生体モニター' , txt:'手術を行う際に、麻酔の深度をモニターする際に利用します。心電図、血圧、呼吸、体温などを測定することができます。'},
+{url:'../asset/images/about_equipment9.png' , main:'人工呼吸器（ベンチレーター）' , txt:'麻酔・手術を行う際に、人工呼吸器で呼吸を管理します。'},
+{url:'../asset/images/about_equipment10.png' , main:'内視鏡システム' , txt:'異物除去や胃や大腸の検査、生検を行います。'},
+{url:'../asset/images/about_equipment11.png' , main:'電気メス' , txt:''},
+{url:'../asset/images/about_equipment12.png' , main:'アクロサージ' , txt:'腫瘍外科にて、止血をしながら腫瘍切除できます。'},
+{url:'../asset/images/about_equipment13.png' , main:'ストライカー　TPSシステム' , txt:''},
+{url:'../asset/images/about_equipment14.png' , main:'ストライカー　CORE2' , txt:'整形外科、神経外科の手術にて利用。プレート固定をするための穴を開けたり、医療用ﾋﾟﾝを挿入するために使用します'},
+{url:'../asset/images/about_equipment15.png' , main:'超音波スケーラー' , txt:'歯周病等で歯石が付着している場合、除去処置に使用します。'},
+{url:'../asset/images/about_equipment16.png' , main:'サージカルシステム' , txt:'整形外科（骨きり、骨削り）、歯科疾患（歯切除、ポリッシング）などに利用します。'},
+{url:'../asset/images/about_equipment17.png' , main:'オートクレーブ' , txt:''},
+{url:'../asset/images/about_equipment18.png' , main:'ガス滅菌器' , txt:'手術で使用する器具などを滅菌。'},
+{url:'../asset/images/about_equipment19.png' , main:'中性次亜塩素水生成器' , txt:'ウイルスや細菌などを殺菌する消毒水を生成。診察室、犬舎、病院の床などの消毒に使用します。また、口腔外科の消毒にも利用します。'},
+{url:'../asset/images/about_equipment20.png' , main:'ネブライザー' , txt:'呼吸器疾患のときに、気管、気管支まで抗生剤などを吸入するのに使用。'}
+] %>
+
+
+<section class="p-pageTop p-pageTop__about">
+  <div class="p-pageTop__txt p-pageTop__txt__white">
+    <p class="p-pageTop__txt--main"><%- about.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- about.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-about">
+  <div class="c-ttl__page">
+    <p class="c-ttl__page__main"><%- about.txt3 %></p>
+    <p class="c-ttl__page__sub"><%- about.txt4 %></p>
+  </div>
+  <div class="l-about__institution">
+    <ul class="l-about__institution__list">
+      <% for(var i=0; i<about_institution.length; i++){ %>
+        <li class="l-about__institution__list__li">
+          <div class="l-about__institution__list__li__img">
+            <img alt="none" src=<%- about_institution[i].url %>>
+          </div>
+          <p class="l-about__institution__list__li__p"><%- about_institution[i].txt %></p>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="l-about__middle">
+    <ul class="l-about__middle__list">
+      <% for(var i=0; i<about_middle.length; i++){ %>
+        <li class="l-about__middle__list__li">
+          <div class="l-about__middle__list__li__img">
+            <img alt="none" src=<%- about_middle[i].url %>>
+          </div>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="c-ttl__page">
+    <p class="c-ttl__page__main"><%- about.txt5 %></p>
+    <p class="c-ttl__page__sub"><%- about.txt6 %></p>
+  </div>
+  <div class="l-about__equipment">
+    <ul class="l-about__equipment__list">
+      <% for(var i=0; i<about_equipment.length; i++){ %>
+        <li class="l-about__equipment__list__li">
+          <div class="l-about__equipment__list__li__img">
+            <img alt="none" src=<%- about_equipment[i].url %>>
+          </div>
+          <p class="l-about__equipment__list__li__main"><%- about_equipment[i].main %></p>
+          <p class="l-about__equipment__list__li__p"><%- about_equipment[i].txt %></p>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</section>

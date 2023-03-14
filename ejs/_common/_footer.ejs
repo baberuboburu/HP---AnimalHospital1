@@ -10,52 +10,40 @@
   txt9 : 'Copyright 2022 野田山動物病院',
   btn : 'WEB予約受付'
 } %>
-<% footer_menu = {
-  txt1 : '  ▶︎  スタッフ紹介',
-  txt2 : '  ▶︎  診療案内',
-  txt3 : '  ▶︎  院内設備',
-  txt4 : '  ▶︎  アクセス',
-  txt5 : '  ▶︎  求人募集'
-} %>
-<% footer_menu_href = {
-  url1 : '',
-  url2 : '',
-  url3 : '',
-  url4 : '',
-  url5 : ''
-} %>
-<% footer_about = {
-  txt1 : ' - 整形外科',
-  txt2 : ' - 歯科',
-  txt3 : ' - 健康診断',
-  txt4 : ' - 予防'
-} %>
-<% footer_about_href = {
-  url1 : '',
-  url2 : '',
-  url3 : '',
-  url4 : '',
-  url5 : ''
-} %>
+<% var footer_menu = [
+  {href:'../staff/staff.html' , txt:'  ▶︎  スタッフ紹介'},
+  {href:'../health/health.html' , txt:'  ▶︎  診療案内'},
+  {href:'../about/about.html' , txt:'  ▶︎  院内設備'},
+  {href:'../access/access.html' , txt:'  ▶︎  アクセス'},
+  {href:'../reqruit/reqruit.html' , txt:'  ▶︎  求人募集'}
+] %>
+<% var footer_about = [
+  {href:'' , txt:' - 整形外科'},
+  {href:'../tooth/tooth.html' , txt:' - 歯科'},
+  {href:'../medical/medical.html' , txt:' - 健康診断'},
+  {href:'../prevention/prevention.html' , txt:' - 予防'}
+] %>
 <% var footer_ad = [
-  {url:'',img:'../asset/images/Line.png'},
-  {url:'',img:'../asset/images/staffblog.png'},
-  {url:'',img:'../asset/images/oasis.png'},
-  {url:'',img:'../asset/images/swingtails.png'}
+  {url:'', class:'l-footer__ad__right__1' ,img:'../asset/images/Line.png'},
+  {url:'', class:'l-footer__ad__right__2' ,img:'../asset/images/staffblog.png'},
+  {url:'', class:'l-footer__ad__right__3' ,img:'../asset/images/oasis.png'},
+  {url:'', class:'l-footer__ad__right__4' ,img:'../asset/images/swingtails.png'}
 ] %>
  </main>
     <footer class="l-footer">
       <div class="l-footer__ad">
         <div class="l-footer__ad__left">
           <a href="" class="l-footer__ad__left__facebook">
-            <img src="../asset/images/facebook.png" alt="none">
+            <img src="../asset/images/facebook.png" alt="none" class="l-footer__ad__left__facebook__img">
           </a>
         </div>
         <div class="l-footer__ad__right">
           <% for(var i=0; i<footer_ad.length; i++){ %>
-            <a class="l-footer__ad__right__link" href=<%- footer_ad[i].url %>>
-              <img alt="none" src=<%- footer_ad[i].img %>>
-            </a>
+            <div class=<%- footer_ad[i].class %>>
+              <a class="l-footer__ad__right__link" href=<%- footer_ad[i].url %>>
+                <img alt="none" class="l-footer__ad__right__link__img" src=<%- footer_ad[i].img %>>
+              </a>
+            </div>
           <% } %>
         </div>
         <div class="l-footer__ad__animals">
@@ -65,7 +53,7 @@
       <div class="l-footer__green">
         <div class="l-footer__green__left">
           <a href="" class="l-footer__green__left__logo">
-            <img src="../asset/images/logo_white.png" alt="none">
+            <img src="../asset/images/logo_white.png" alt="none" class="l-footer__green__left__logo__img">
           </a>
           <div class="l-footer__green__left__txt">
             <p class="l-footer__green__left__txt__p"><%- footer.txt1 %></p>
@@ -77,12 +65,12 @@
             </a>
           </div>
           <div class="c-schedule">
-            <img src="../asset/images/schedule.png" alt="none">
+            <img src="../asset/images/schedule.png" alt="none" class="c-schedule__img">
             <div class="c-schedule__txt">
-              <p><%- footer.txt3 %></p>
-              <p><%- footer.txt4 %></p>
-              <p><%- footer.txt5 %></p>
-              <p><%- footer.txt6 %></p>
+              <p class="c-schedule__txt--pc"><%- footer.txt3 %></p>
+              <p class="c-schedule__txt--sp"><%- footer.txt4 %></p>
+              <p class="c-schedule__txt--sp"><%- footer.txt5 %></p>
+              <p class="c-schedule__txt--pc"><%- footer.txt6 %></p>
             </div>
           </div>
           <div class="l-footer__green__left__attention"><%- footer.txt7 %></div>
@@ -92,24 +80,29 @@
             <p class="l-footer__green__right__txt__p"><%- footer.txt8 %></p>
             <br>
             <ul class="l-footer__green__right__txt__list">
-              <% for(var i in footer_menu){ %>
-                <% if(footer_menu[i]=='  ▶︎  診療案内'){ %>
-                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu_href[i] %>><%- footer_menu[i] %></a>
+              <% for(var i=0; i<footer_menu.length; i++){ %>
+                <% if(footer_menu[i].txt=='  ▶︎  診療案内'){ %>
+                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu[i].href %>><%- footer_menu[i].txt %></a>
                   <br>
-                  <% for(var j in footer_about){ %>
+                  <% for(var j=0; j<footer_about.length; j++){ %>
                     <li class="l-footer__green__right__txt__list__li">
-                      <a class="l-footer__green__right__txt__list__a" href=<%- footer_about_href[j] %>><%- footer_about[j] %></a>
+                      <a class="l-footer__green__right__txt__list__a" href=<%- footer_about[j].href %>><%- footer_about[j].txt %></a>
                     </li>
                     <br>
                   <% } %>
                   <br><br>
                 <% }else{ %>
-                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu_href[i] %>><%- footer_menu[i] %></a>
+                  <a class="l-footer__green__right__txt__list__a" href=<%- footer_menu[i].href %>><%- footer_menu[i].txt %></a>
                   <br><br>
                 <% } %>
               <% } %>
             </ul>
           </div>
+        </div>
+        <div class="l-footer__green__staff">
+          <a class="l-footer__green__staff__link" href=<%- footer_ad[1].url %>>
+            <img alt="none" class="l-footer__green__staff__link__img" src=<%- footer_ad[1].img %>>
+          </a>
         </div>
       </div>
       <div class="l-footer__black">

@@ -4,14 +4,104 @@
   height: 100%;
   @extend .flex_column;
   &__li{
+    color: #484848;
     font-size: 1.4rem;
     &__txt{
       width: 375.72;
       text-align: left;
       margin-left: 5.64px;
-      &__span{
+      @extend .flex;
+      justify-content: flex-start;
+      &__p{
         margin-right: 2.8rem;
       }
     }
   }
+  &__dashed{
+    width: 100%;
+    & img{
+      width: 100%;
+    }
+  }
+}
+
+.c-list__staff{
+  height: 100%;
+  @extend .flex_column;
+  &__li{
+    color: #484848;
+    font-size: 1.4rem;
+    &__txt{
+      width: 375.72;
+      text-align: left;
+      margin-left: 5.64px;
+      @extend .flex;
+      justify-content: flex-start;
+      &__p{
+        margin-right: 2.8rem;
+      }
+    }
+  }
+  &__dashed{
+    width: 382px;
+  }
+}
+
+.c-list__medical{
+  height: 100%;
+  @extend .flex_column;
+  &__li{
+    &__txt{
+      color: bp.$brown1;
+      font-size: 2.0rem;
+      width: 375.72;
+      text-align: left;
+      margin: 33.99px 0 33.99px 36.99px;
+      @extend .flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      &__span{
+        margin-right: 110px;
+      }
+    }
+  }
+}
+
+@include bp.breakpoint(tablet){
+  .c-list{
+    height: 100%;
+    &__li{
+      color: white;
+      font-family: 'KozGoPr6N-Regular';
+      &__txt{
+        display: block;
+        width: 375.72;
+        text-align: left;
+        margin-left: 5.64px;
+      }
+    }
+  }
+  .c-list__staff{
+  height: 100%;
+  &__li{
+    color: #484848;
+    font-size: 2.4rem;
+    &__txt{
+      display: block;
+      width: 375.72;
+      text-align: left;
+      margin-left: 5.64px;
+      justify-content: flex-start;
+      &__p{
+        margin-right: 0;
+      }
+    }
+  }
+  &__dashed{
+    &.c-list__staff__dashed__arrange{
+      width: 382px;
+    }
+  }
+}
 }

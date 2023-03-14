@@ -1,0 +1,80 @@
+<% access = {
+  txt1 : 'アクセス',
+  txt2 : 'ACCESS',
+  txt3 : '周辺地図',
+  txt4 : 'MAP',
+  txt5 : 'アクセス'
+} %>
+<% var access_map = [
+{logo:'../asset/images/access_logo_hospt.png' , address:'〒522-0025  滋賀県彦根市野田山町1058-1'  , tel:'0749-26-2528' , src:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.329348760994!2d136.27449921512596!3d35.24806138029754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003d47ccf6ebdf9%3A0x8155c61522122309!2z44CSNTIyLTAwMjUg5ruL6LOA55yM5b2m5qC55biC6YeO55Sw5bGx55S677yR77yQ77yV77yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1678324615254!5m2!1sja!2sjp'},
+{logo:'../asset/images/access_logo_salon.png' , address:'〒522-0025  滋賀県彦根市野田山町1049-1'  , tel:'0749-29-0950' , src:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.330582527527!2d136.27466641512603!3d35.248030680297596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003d47cc5d635a3%3A0x8e1663ff9a63b3fc!2z44CSNTIyLTAwMjUg5ruL6LOA55yM5b2m5qC55biC6YeO55Sw5bGx55S677yR77yQ77yU77yZ4oiS77yR!5e0!3m2!1sja!2sjp!4v1678452375392!5m2!1sja!2sjp'}
+] %>
+<% var access_access = [
+{src:'../asset/images/access_car.png' , main:'自動車でお越しの場合' , sub:'彦根インターチェンジから1.7km。' , notice:'※駐車場10台<br>※国道306号線沿い、野田山バス停前'},
+{src:'../asset/images/access_bus.png' , main:'バスでお越しの場合' , sub:'テキストテキストテキストテキスト' , notice:'※テキストテキスト<br>※テキストテキストテキスト'}
+] %>
+
+<section class="p-pageTop p-pageTop__access">
+  <div class="p-pageTop__txt p-pageTop__txt__white">
+    <p class="p-pageTop__txt--main"><%- access.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- access.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-access">
+  <div class="l-access__map">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- access.txt3 %></p>
+      <p class="c-ttl__page__sub"><%- access.txt4 %></p>
+    </div>
+    <div class="l-access__map__box">
+      <% for(var i=0; i<access_map.length; i++){ %>
+        <div class="l-access__map__box__card">
+          <div class="c-map c-map__access">
+            <iframe width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=<%- access_map[i].src %>></iframe>
+          </div>
+          <div class="l-access__map__box__card__txt">
+            <p class="l-access__map__box__card__txt--address"><%- access_map[i].address %></p>
+            <p class="l-access__map__box__card__txt--address"><%- access_map[i].tel %></p>
+          </div>
+        </div>
+      <% }%>
+    </div>
+    <div class="l-access__map__img">
+      <img src="../asset/images/access_map_illust.png" alt="none">
+    </div>
+  </div>
+  <div class="l-access__access">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- access.txt1 %></p>
+      <p class="c-ttl__page__sub"><%- access.txt2 %></p>
+    </div>
+    <div class="l-access__access__box">
+      <div class="l-access__access__box__left">
+        <% for(var i=0; i<access_access.length; i++){ %>
+          <div class="l-access__access__box__left__content">
+            <div class="l-access__access__box__left__content__case">
+              <div class="l-access__access__box__left__content__case__img">
+                <img alt="none" src=<%- access_access[i].src %>>
+                <p class="l-access__access__box__left__content__case__p"><%- access_access[i].main %></p>
+              </div>
+            </div>
+            <div class="l-access__access__box__left__content__txt"><%- access_access[i].sub %></div>
+            <div class="l-access__access__box__left__content__notice"><%- access_access[i].notice %></div>
+          </div>
+        <% }%>
+      </div>
+      <div class="l-access__access__box__right">
+        <div class="l-access__access__box__right__img1">
+          <img alt="none" src="../asset/images/access_access1.png">
+        </div>
+        <div class="l-access__access__box__right__img2">
+          <img alt="none" src="../asset/images/access_access2.png">
+        </div>
+      </div>
+    </div>
+    <div class="l-access__access__img">
+      <img src="../asset/images/access_access_illust.png" alt="none">
+    </div>
+  </div>
+</section>

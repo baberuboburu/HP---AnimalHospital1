@@ -16,11 +16,61 @@
     margin-top: 7.1px;
     text-align: start;
     font-size: 1.2rem;
-    @extend .font;
+    @extend .font_koz;
   }
   &__topimg{
     position: absolute;
     bottom: 0;
     right: 25px;
+  }
+}
+
+.c-schedule__medical{
+  width: auto;
+  height: auto;
+  &.c-schedule__long{
+    height: 373px;
+  }
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  &__txt{
+    width:392px;
+    margin-top: 7.1px;
+    text-align: start;
+    font-size: 1.2rem;
+    @extend .font_koz;
+  }
+  &__topimg{
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+  }
+}
+
+@include bp.breakpoint(tablet){
+  .c-schedule{
+    width: 351px;
+    height: 208px;
+    margin-left: auto;
+    margin-right: auto;
+    &.c-schedule__long{
+      height: 373px;
+    }
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+    &__img{
+      width: 90%;
+    }
+    &__txt{
+      width:321px;
+      margin-top: 20.65px;
+      line-height: 2;
+      &--pc{
+        display: none;
+      }
+    }
   }
 }

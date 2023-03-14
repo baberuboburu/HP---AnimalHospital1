@@ -182,7 +182,7 @@
   }
 }
 
-@include bp.breakpoint(sp){
+@include bp.breakpoint(tablet){
   .l-header{
     width: 100vw;
     height: 66.39px;

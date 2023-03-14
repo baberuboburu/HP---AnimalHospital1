@@ -6,6 +6,13 @@
 @use "layout/l-header";
 @use "layout/l-main";
 @use "layout/l-footer";
+@use "layout/l-about";
+@use "layout/l-access";
+@use "layout/l-medical";
+@use "layout/l-prevention";
+@use "layout/l-reqruit";
+@use "layout/l-staff";
+@use "layout/l-tooth";
 
 //object
 @use "object/component/_c-bg.scss";
@@ -18,6 +25,8 @@
 
 //project
 @use "object/project/_p-corona.scss";
+@use "object/project/_p-pageTop.scss";
 
 //utility
 @use "object/utility/_u-flex.scss";
+@use "object/utility/_u-responsive.scss";

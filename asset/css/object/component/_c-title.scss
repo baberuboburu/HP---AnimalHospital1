@@ -4,6 +4,7 @@
   @extend .font_brown2;
   font-weight: 300;
   text-align: center;
+  z-index: 1;
   &.c-ttl__white{
     color: white;
   }
@@ -13,5 +14,73 @@
   &__sub{
     font-size: 1.1rem;
     margin-top: 18.32px;
+  }
+}
+
+.c-ttl__page{
+  @extend .font_brown2;
+  font-weight: 300;
+  text-align: center;
+  z-index: 1;
+  margin-top: 98.65px;
+  &__main{
+    font-size: 3.2rem;
+  }
+  &__sub{
+    @extend .font_m;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+}
+
+.c-ttl__vol2{
+  @extend .font_brown2;
+  font-weight: 300;
+  text-align: center;
+  z-index: 1;
+  margin-top: 34.41px;
+  margin-bottom: 21.93px;
+  &__main{
+    font-size: 2.0rem;
+  }
+  &__sub{
+    @extend .font_m;
+    font-size: 1.1rem;
+    margin-top: 3px;
+  }
+}
+
+@include bp.breakpoint(tablet){
+  .c-ttl{
+    color: white;
+    text-align: center;
+    &.c-ttl__sp__brown2{
+      color: bp.$brown2;
+    }
+    &__sub{
+      font-size: 1.2rem;
+      margin-top: 0.6rem;
+      color: white;
+    }
+  }
+  .c-ttl__page{
+    margin-top: 37.25px;
+    &__main{
+      font-size: 2.8rem;
+    }
+    &__sub{
+      font-size: 1.4rem;
+      margin-top: 8px;
+    }
+  }
+  .c-ttl__vol2{
+    &__main{
+      font-size: 2.4rem;
+    }
+    &__sub{
+      font-family: 'Regular';
+      font-size: 1.6rem;
+      margin-top: 3px;
+    }
   }
 }

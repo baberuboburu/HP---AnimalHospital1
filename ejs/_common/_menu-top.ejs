@@ -1,0 +1,21 @@
+<% var menu = [
+  {main:'スタッフ紹介' , sub:'STAFF' , href:'./staff/staff.html' , img:'./asset/images/menu_staff.png'},
+  {main:'診療案内' , sub:'MEDICAL' , href:'./medical/medical.html' , img:'./asset/images/menu_medical.png'},
+  {main:'院内施設' , sub:'ABOUT' , href:'./about/about.html' , img:'./asset/images/menu_about.png'},
+  {main:'アクセス' , sub:'ACCESS' , href:'./access/access.html' , img:'./asset/images/menu_access.png'},
+  {main:'求人募集' , sub:'REQRUIT' , href:'./reqruit/reqruit.html' , img:'./asset/images/menu_reqruit.png'}
+] %>
+
+<section class="l-menu">
+  <% for(var i=0; i<menu.length; i++){ %>
+    <a class="l-menu__a" href=<%- menu[i].href %>>
+      <div class="l-menu__a__img">
+        <img alt="none" src=<%- menu[i].img %>>
+      </div>
+      <div class="l-menu__a__txt">
+        <p class="l-menu__a__txt--main"><%- menu[i].main %></p>
+        <p class="l-menu__a__txt--sub" ><%- menu[i].sub %></p>
+      </div>
+    </a>
+  <% } %>
+</section>

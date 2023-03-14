@@ -19,3 +19,56 @@
     }
   }
 }
+
+.c-card__s{
+  display: block;
+  max-width: 232.24px;
+  background-color: white;
+  border: 1px #E9E4E0 solid;
+  padding: 23px;
+  &__img{
+    max-width: 193.53px;
+    max-height: 148.65px;
+    & img{
+      width: 100%;
+    }
+  }
+  &__txt{
+    @extend .font_brown2;
+    margin-top: 18.97px;
+    &--main{
+      font-size: 1.6rem;
+    }
+    &--sub{
+      font-size: 1.4rem;
+      margin-top: 6.58px;
+    }
+  }
+}
+
+@include bp.breakpoint(tablet){
+  .c-card{
+    background-color: white;
+    &.c-card__sp__column{
+      width: 100%;
+      border: none;
+      padding: 0 31px;
+    }
+    &__img{
+      &__img{
+        &.c-card__sp__column{
+          width: 100%;
+        }
+      }
+    }
+    &__txt{
+      &--main{
+        font-size: 1.8rem;
+      }
+      &--sub{
+        font-size: 1.2rem;
+        margin-top: 7px;
+      }
+    }
+  }
+}

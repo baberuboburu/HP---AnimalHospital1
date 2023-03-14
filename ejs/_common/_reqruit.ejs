@@ -1,0 +1,54 @@
+<% reqruit = {
+  txt1 : '求人募集',
+  txt2 : 'Reqruit',
+  txt3 : '現在、動物看護師を1名募集しております。',
+  txt4 : '',
+  txt5 : '',
+  txt6 : ''
+} %>
+<% var reqruit_list = [
+{label:'募集職種' , txt:'動物看護師'},
+{label:'雇用形態' , txt:'正社員  もしくは  パートタイム（新卒、経験者を問いません。）'},
+{label:'勤務時間' , txt:'ライフワークバランスを重視した勤務（週休3日勤務等）はご希望に応じますので、<br>お気軽にご相談ください。'},
+{label:'給与' , txt:'ーーー'},
+{label:'福利厚生' , txt:'社会保険、厚生年金、労災保険、雇用保険完備<br>セミナーおよび学会参加の補助制度あり'},
+{label:'求める人材' , txt:'明るくてコミュニケーション能力のある人材を求めています。'},
+{label:'応募' , txt:'当院（0749-26-2528）へお電話ください。'}
+] %>
+
+<section class="p-pageTop p-pageTop__reqruit">
+  <div class="p-pageTop__txt">
+    <p class="p-pageTop__txt--main"><%- reqruit.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- reqruit.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-reqruit">
+  <div class="l-reqruit__exclamation">
+    <div class="c-bg__yellow">
+      <div class="l-reqruit__exclamation__img">
+        <img src="../asset/images/reqruit_exclamation.png" alt="none">
+      </div>
+      <p class="l-reqruit__exclamation"><%- reqruit.txt3 %></p>
+    </div>
+  </div>
+  <div class="c-list">
+    <% for(var i=0; i<reqruit_list.length; i++){ %>
+      <li class="c-list__li c-list__li__484848">
+        <div class="c-list__li__txt">
+          <span class="c-list__li__txt__span"><%- reqruit_list[i].label %></span>
+          <span><%- reqruit_list[i].txt %></span>
+        </div>
+        <div class="c-list__dashed">
+          <img src="../asset/images/top_news_dashed.png" alt="none">
+        </div>
+    </li>
+    <% } %>
+  </div>
+  <div class="l-reqruit_img1">
+    <img src="../asset/images/reqruit_illust1.png" alt="none">
+  </div>
+  <div class="l-reqruit_img2">
+    <img src="../asset/images/reqruit_illust2.png" alt="none">
+  </div>
+</section>

@@ -1,0 +1,129 @@
+<% prevention = {
+  txt1 : '予防',
+  txt2 : 'prevention',
+  txt3 : ' > ワクチン予防',
+  txt4 : ' > フィラリア予防',
+  txt5 : 'ワクチン予防',
+  txt6 : 'VACCINE PREVENTION',
+  txt7 :'ワクチンは、主に動物同士で感染する伝染病の予防をするためのものです。<br>ワクチン接種の時期としては、生まれてから最初のワクチンは、母親から譲り受けた免疫が邪魔をするため数回の接種が必要になります。<br><br>当院では、犬の場合、6週齢くらいで1回目の注射、その後3週間間隔で3回の接種をすすめております。ネコの場合、2か月齢と3か月齢の2回接種をすすめております。<br>その後は、年に1回の接種を継続するようにお話しております。<br><br>ワクチンは、まれに副作用を起こすこともあります。午前中に接種することでその後の対処が可能になるため早めに来院されることをお勧めいたします。',
+  txt8 :'ワクチンで予防できる病気',
+  txt9 :'犬',
+  txt10 :'フィラリア症',
+  txt11 :'FILARIASIS',
+  txt12 :'フィラリア症の原因である犬糸状虫は乳白色でソーメン状の外形をもち、成虫になると雄の体長が約17ｃｍ、雌の体長が約28ｃｍになる。蚊の吸血により体内に取り込まれたミクロフィラリア（mf）はここで2回の脱皮をして、10～14日後に感染幼虫（第3期幼虫:L3）になる。<br>ｍｆが蚊の体内で発育するのに最適な気温は、２５～２８℃で１４℃以下では発育が停止する。このため、フィラリア予防の期間も温暖になってから始まります。<br><br>犬の体内に感染幼虫が侵入し、だいたい12日くらいで脱皮をして第４期幼虫（L4）になる。L4は、皮膚の下、筋肉、脂肪などで2か月間発育を続けます。フィラリア予防薬は、このL3～L4の時期の幼虫を殺す効果があります。<br><br>そのまま、予防をしないで成長を続けると感染後３～４か月で肺動脈に移動し、その３か月後には性成熟し、ｍｆを産生するようになります。<br><br>犬に寄生したフィラリア成虫の寿命は、５?７年、血液中のｍｆの寿命は１～２年。<br>   <br>猫に寄生したフィラリア成虫の寿命は、２～３年。猫の心臓に寄生できるフィラリアの数は通常１、２匹程度なので、ｍｆを産生することはほとんどありません。<br><br>彦根市および愛知、犬上郡の地区では、例年５月上旬から平均気温が１５℃以上になるため感染期にはいりますが、蚊の体内でＬ２⇒Ｌ４に発育するのには１か月はかかるため５月下旬からの予防スタートでも大丈夫なのです。<br><br>フィラリアに感染すると、疲れやすい、咳をするという症状からお腹に腹水がたまるという慢性症状まで色々とありますが、最終的には心不全により死亡してしまいます。<br>ネコのフィラリア症の場合、犬よりも感染率は低いとは言われていますが、全体の１０～２０％のネコに感染するというデータがあります。症状としても様々で食欲不振、嘔吐などから突然死を起こすこともあるため非常に怖いです。<br><br><br>当院では、犬の場合、１２か月効果の持続する注射剤、経口薬（錠剤、ジャーキータイプ）、滴下剤の４タイプをご用意しております。<br><br>また、猫の場合、滴下剤になりますが、フィラリア、ノミ、ミミヒゼンダニ、腸内寄生虫の４つを予防してくれる便利な薬があります。<br><br>予防に関して、わからないことがあればお気軽にスタッフまでご相談ください。',
+  txt13 :'ノミ・マダニ',
+  txt14 :'FLEAS AND TICKS',
+  txt15 :'ノミやマダニが寄生すると、かゆみや皮膚炎を起こすだけでなく様々な病原体を媒介する場合があります。<br>彦根市周辺では、３月から１１月までの間にマダニ感染を確認していますので、その間は特に要注意です。<br>また、外に出る猫に関しては、年中ノミ感染のリスクがあります。さらに、感染した猫が家の中に入ることで人への感染がひろがります。'
+} %>
+<% var prevention_dog = [
+{ttl:'犬ジステンパー感染症' , txt:'高熱、目ヤニ、鼻水が出て、元気や食欲がなくなり、嘔吐や下痢もします。また、病気が進むと神経系がおかされマヒなどの後遺症が残る場合がありまず。死亡率の高い病気です。'},
+{ttl:'犬パルボウイルス感染症' , txt:'激しい嘔吐、下痢を起こし、食欲がなくなり、急激に衰弱します。<br>重症になると脱水症状が進み、短時間で死亡することがあります。伝染力が強く、死亡率の高い病気です。'},
+{ttl:'犬伝染性肝炎' , txt:'発熱、腹痛、嘔吐、下痢がみられ、目が白く濁ることもあります。生後1年未満の子犬が感染すると、全く症状を示すことなく突然死することがあります。'},
+{ttl:'犬アデノウイルス2型感染症（犬伝染性喉頭気管炎）' , txt:'発熱、食欲不振、クシャミ、鼻水、短く乾いた咳がみられ、肺炎を起こすこともあります。他のウイルスとの混合感染により症状が重くなり、死亡率が高くなる呼吸器病です。'},
+{ttl:'犬パラインフルエンザウイルス感染症' , txt:'カゼ症状がみられ、混合感染や二次感染が起こると重症になり死亡することもあります。<br>伝染性が非常に強い病気です。'},
+{ttl:'犬コロナウイルス感染症（CCV)' , txt:'成犬の場合は軽度の胃腸炎ですむことが多いのですが、犬パルボウイルスとの混合感染では重症化することも。子犬の場合は、嘔吐と重度の水様性下痢を引き起こします。'},
+{ttl:'犬レプトスピラ感染症' , txt:'２種類のタイプがあり、人間にも共通の感染症です。<br><br>[イクテロヘモラジー型]<br>発熱、嘔吐、黄疸、歯肉からの出血などが、みられます。<br><br>[カニコーラ型]<br>発熱、筋肉痛、脱水症状などが現れ、尿毒症になり２～３日以内に死亡することがあります'}
+] %>
+<% var prevention_cat = [
+{ttl:'猫汎白血球減少症（猫伝染性腸炎）' , txt:'症状としては最初に元気が無くなり、食事を摂りたがらないといったところから始まります。その後発熱･嘔吐・下痢・血便などの症状があらわれ、それに伴って脱水症状や体温の低下が見られることがあります。<br>この病気の特性として、名前どおり病気抵抗力の元になる白血球が減少し、他の病気を併発することが増えます。ただでさえ耐久力がおちている状態なので、こうなるとさらに危険性が高まってしまいます。'},
+{ttl:'猫ウィルス性鼻気管炎' , txt:'子猫から成猫までまんべんなく発症しやすいのがこの猫ウィルス性鼻気管炎です。また、このヘルペスが厄介で、病気が治ったからと言って安心できません。急に症状が悪化するのが特徴で、くしゃみ･鼻水・ヨダレといった一見風邪のような症状を見せます。（このくしゃみやヨダレでほかの猫にうつるので要注意）このとき、一緒に結膜炎を起こすことが多いのも特徴です。<br>通常、充分な体力があれば3～4日後をピークにして、次第に回復してきます。しかし、その後猫が体調を崩した、とかストレスを受けているとみると、また出てきて悪さを始めます。'},
+{ttl:'猫カリシウィルス感染症' , txt:'猫ウィルス性鼻気管炎と同じく、治ったように見えても実はキャリアとなることが多く、いつまでも他の猫に対しての脅威となり続ける事もポイントです。症状が実にさまざまで、上の猫ウィルス性鼻気管炎のような症状を見せるもの、外見にはまったく症状を出さないもの、粘膜に潰瘍を起こしてしまうもの、肺炎を起こすものなど、多種多様です。潰瘍を起こすものは大抵、口･鼻などに反応が見られるのでわかりやすいかと思います。<br>こういったものは通常、猫のほうにきちんと抵抗力さえあれば半月ほどで回復します。怖いのは肺炎タイプ。呼吸がゼエゼエと荒いようなら要注意です。肺炎タイプは悪化すると助からないことも多いので特に注意が必要です。'}
+] %>
+<% var prevention_warm = [
+{ttl:'ノミアレルギー性皮膚炎' , txt:'ノミに刺されることでノミの唾液に対して激しいアレルギーを起こす病気です。 少ない寄生でも強いかゆみを伴うのも特徴です。'},
+{ttl:'犬バベシア症' , txt:'マダニが媒介して犬に貧血症を引き起こす恐ろしい病気です。犬の赤血球に寄生し、免疫反応により溶血性の貧血を起こし、様々な症状を引き起こします。治療が遅れると死に至ることが多く、治療自体も難しいため、予防が非常に大切になります。'},
+{ttl:'SFTS（重症熱性血小板減少症候群） ' , txt:'SFTSウイルスを保有するマダニに吸血されることにより人に感染します。発熱、消化器症状（嘔気、嘔吐、腹痛、下痢、下血）を起こし、腹痛、筋肉痛、神経症状、リンパ節腫脹、出血症状などを伴う場合もあります。致死率は10～30％程度と言われ、危険な感染症です。滋賀県内でのペットおよび人への感染報告があるため、予防が非常に重要になります。<br><br>予防薬は、滴下タイプ、経口薬（錠剤タイプ、チュアブルタイプ）などがあるため、処方に関しては動物病院にてご相談ください。'}
+] %>
+
+<section class="p-pageTop p-pageTop__prevention">
+  <div class="p-pageTop__txt p-pageTop__txt__white">
+    <p class="p-pageTop__txt--main"><%- prevention.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- prevention.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-prevention">
+  <div class="c-ttl__page">
+    <p class="c-ttl__page__main"><%- prevention.txt5 %></p>
+    <p class="c-ttl__page__sub"><%- prevention.txt6 %></p>
+  </div>
+  <div class="l-prevention__discript">
+    <p class="l-prevention__discript__p"><%- prevention.txt7 %></p>
+  </div>
+  <div class="l-prevention__dog">
+    <div class="l-prevention__dog__img">
+      <img src="../asset/images/prevention_dog.png" alt="none">
+      <div class="l-prevention__dog__img__txt">
+        <p class="l-prevention__dog__img__txt--pre"><%- prevention.txt8 %></p>
+        <p class="l-prevention__dog__img__txt--spi"><%- prevention.txt9 %></p>
+      </div>
+    </div>
+    <ul class="l-prevention__dog__list">
+      <% for(var i=0; i<prevention_dog.length; i++){ %>
+        <li class="l-prevention__dog__list__li">
+          <p class="l-prevention__dog__list__li--ttl"><%- prevention_dog[i].ttl %></p>
+          <p class="l-prevention__dog__list__li--txt"><%- prevention_dog[i].txt %></p>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="l-prevention__cat">
+    <div class="l-prevention__cat__img">
+      <img src="../asset/images/prevention_cat.png" alt="none">
+      <div class="l-prevention__cat__img__txt">
+        <p class="l-prevention__cat__img__txt--pre"><%- prevention.txt8 %></p>
+        <p class="l-prevention__cat__img__txt--spi"><%- prevention.txt9 %></p>
+      </div>
+    </div>
+    <ul class="l-prevention__cat__list">
+      <% for(var i=0; i<prevention_cat.length; i++){ %>
+        <li class="l-prevention__cat__list__li">
+          <p class="l-prevention__cat__list__li--ttl"><%- prevention_cat[i].ttl %></p>
+          <p class="l-prevention__cat__list__li--txt"><%- prevention_cat[i].txt %></p>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="l-prevention__fil">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- prevention.txt10 %></p>
+      <p class="c-ttl__page__sub"><%- prevention.txt11 %></p>
+    </div>
+    <div class="l-prevention__fil__imgs">
+      <div class="l-prevention__fil__imgs__img1">
+        <img src="../asset/images/prevention_fil1.png" alt="none">
+      </div>
+      <div class="l-prevention__fil__imgs__img2">
+        <img src="../asset/images/prevention_fil2.png" alt="none">
+      </div>
+    </div>
+    <div class="l-prevention__fil__txt">
+      <p class="l-prevention__fil__txt__p"><%- prevention.txt12 %></p>
+    </div>
+  </div>
+  <div class="l-prevention__warm">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- prevention.txt13 %></p>
+      <p class="c-ttl__page__sub"><%- prevention.txt14 %></p>
+    </div>
+    <div class="l-prevention__warm__imgs">
+      <div class="l-prevention__warm__imgs__img1">
+        <img src="../asset/images/prevention_warm1.png" alt="none">
+      </div>
+      <div class="l-prevention__warm__imgs__img2">
+        <img src="../asset/images/prevention_warm2.png" alt="none">
+      </div>
+    </div>
+    <div class="l-prevention__warm__txt">
+      <p class="l-prevention__warm__txt__p"><%- prevention.txt15 %></p>
+    </div>
+    <ul class="l-prevention__warm__list">
+      <% for(var i=0; i<prevention_warm.length; i++){ %>
+        <li class="l-prevention__warm__list__li">
+          <p class="l-prevention__warm__list__li--ttl"><%- prevention_warm[i].ttl %></p>
+          <p class="l-prevention__warm__list__li--txt"><%- prevention_warm[i].txt %></p>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</section>

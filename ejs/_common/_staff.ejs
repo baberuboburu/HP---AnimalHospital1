@@ -1,0 +1,159 @@
+<% staff = {
+  txt1 : 'スタッフ紹介',
+  txt2 : 'STAFF',
+  txt3 : '院長紹介',
+  txt4 : 'DIRECTOR',
+  txt5 : '院長経歴',
+  txt6 : 'Career',
+  txt7 : '趣味',
+  txt8 : 'hobby',
+  txt9 : 'ガーデニング（木に囲まれた生活ができるように植樹をしてます。）<br>テニス（４０歳後半にきて、始めましたが、気持ちだけはもっと上を目指します。）',
+  txt10 : 'ひとつの出会いに感謝し、<br>あきらめない気持ちを大切に',
+  txt11 : 'こんにちは。<br>野田山動物病院、院長の光田昌史です。<br>縁もゆかりもない滋賀県彦根市に移り住み、何かのご縁で色々な人たちに支えられながらペットたちの病気と向き合う日々を送っております。<br><br>開業当初より飼い主さんへのご説明はできるだけシンプルなことが良いと考えながら、難しい言葉は使わず、検査や治療の選択肢もいくつかにしぼるように心がけております。<br><br>また、インフォームドコンセントという言葉がありますが、実際に説明をしても自分では、１００％と思うことでも飼い主さんにとっては、考え方も様々あり、正解はないのかもしれません。それでも、その隙間を少しでも埋められるように、日々の診療に向き合いたいと考えております。<br><br>そして、知識や設備などは、何か毎年新しいことを取りいれ、常に挑戦し続ける姿勢を大切にするように、と考えております。<br><br>今後とも、野田山動物病院をどうぞよろしくお願いいたします。<br><br><br>',
+  txt12 : '院長　光田昌史',
+  txt13 : '所属',
+  txt14 : 'Affiliation'
+} %>
+<% var staff_background = [
+{date:'2001.3' , txt:'酪農学園大学  卒業'},
+{date:'2001.4～' , txt:'パル動物病院<br class="u-nonePC">（静岡県）勤務'},
+{date:'2004.4～' , txt:'舞鶴動物医療センター<br class="u-nonePC">（京都府）勤務'},
+{date:'2007.4.27' , txt:'滋賀県彦根市野田山町<br class="u-nonePC">にて開院'}
+] %>
+<% var staff_belong = [
+{txt:'滋賀県獣医師会'},
+{txt:'動物臨床医学研究会'},
+{txt:'獣医がん学会'},
+{txt:'獣医麻酔外科学会'},
+{txt:'京滋小動物研究会'},
+{txt:'日本小動物歯科研究会<br class="u-nonePC">（レベル２終了）'}
+] %>
+
+<section class="p-pageTop p-pageTop__staff">
+  <div class="p-pageTop__txt p-pageTop__txt__white">
+    <p class="p-pageTop__txt--main"><%- staff.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- staff.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-staff">
+  <div class="c-ttl__page">
+    <p class="c-ttl__page__main"><%- staff.txt3 %></p>
+    <p class="c-ttl__page__sub"><%- staff.txt4 %></p>
+  </div>
+  <div class="l-staff__main">
+    <div class="l-staff__main__left">
+      <div class="l-staff__main__left__img">
+        <img src="../asset/images/staff_main.png" alt="none">
+      </div>
+      <div class="l-staff__main__right__catch u-nonePC">
+        <div class="l-staff__main__right__catch__upper">
+          <div class="l-staff__main__right__catch__upper__img">
+            <img src="../asset/images/staff_catch.png" alt="none">
+          </div>
+          <p class="l-staff__main__right__catch__upper__p"><%- staff.txt10 %></p>
+        </div>
+        <div class="l-staff__main__right__catch__txt">
+          <p class="l-staff__main__right__catch__txt--main"><%- staff.txt11 %></p>
+          <p class="l-staff__main__right__catch__txt--name"><%- staff.txt12 %></p>
+        </div>
+      </div>
+      <div class="l-staff__main__left__career">
+        <div class="c-bg__lightyellow">
+          <div class="c-ttl__vol2">
+            <p class="c-ttl__vol2__main"><%- staff.txt5 %></p>
+            <p class="c-ttl__vol2__sub"><%- staff.txt6 %></p>
+          </div>
+          <div class="c-list__staff">
+            <% for(var i=0; i<staff_background.length; i++){ %>
+              <li class="c-list__staff__li c-list__staff__li__484848">
+                <div class="c-list__staff__li__txt">
+                  <p class="c-list__staff__li__txt__p"><%- staff_background[i].date %></p>
+                  <p><%- staff_background[i].txt %></p>
+                </div>
+                <div class="c-list__staff__dashed">
+                  <% if(i!==staff_background.length-1){ %>
+                    <img src="../asset/images/top_news_dashed.png" alt="none">
+                  <% } %>
+                </div>
+            </li>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="l-staff__main__right__belong u-nonePC">
+        <div class="c-bg__lightyellow">
+          <div class="c-ttl__vol2">
+            <p class="c-ttl__vol2__main"><%- staff.txt13 %></p>
+            <p class="c-ttl__vol2__sub"><%- staff.txt14 %></p>
+          </div>
+          <div class="c-list__staff">
+            <% for(var i=0; i<staff_belong.length; i++){ %>
+              <li class="c-list__staff__li c-list__staff__li__484848">
+                <div class="c-list__staff__li__txt">
+                  <p class="c-list__staff__li__txt__p"><%- staff_belong[i].date %></p>
+                  <p><%- staff_belong[i].txt %></p>
+                </div>
+                <div class="c-list__staff__dashed">
+                  <% if(i!==staff_belong.length-1){ %>
+                    <img src="../asset/images/top_news_dashed.png" alt="none">
+                  <% } %>
+                </div>
+            </li>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="l-staff__main__left__hobby">
+        <div class="c-bg__lightyellow">
+          <div class="c-ttl__vol2">
+            <p class="c-ttl__vol2__main"><%- staff.txt7 %></p>
+            <p class="c-ttl__vol2__sub"><%- staff.txt8 %></p>
+          </div>
+          <p class="l-staff__main__left__hobby__txt"><%- staff.txt9 %></p>
+          <div class="l-staff__main__left__hobby__margin"></div>
+        </div>
+        <div class="l-staff__main__left__hobby__img">
+          <img src="../asset/images/staff_hobby.png" alt="none">
+        </div>
+      </div>
+    </div>
+    <div class="l-staff__main__right u-onlyPC">
+      <div class="l-staff__main__right__catch">
+        <div class="l-staff__main__right__catch__upper">
+          <p class="l-staff__main__right__catch__upper__p"><%- staff.txt10 %></p>
+          <div class="l-staff__main__right__catch__upper__img">
+            <img src="../asset/images/staff_catch.png" alt="none">
+          </div>
+        </div>
+        <div class="l-staff__main__right__catch__txt">
+          <p class="l-staff__main__right__catch__txt--main"><%- staff.txt11 %></p>
+          <p class="l-staff__main__right__catch__txt--name"><%- staff.txt12 %></p>
+        </div>
+      </div>
+      <div class="l-staff__main__right__belong">
+        <div class="c-bg__lightyellow">
+          <div class="c-ttl__vol2">
+            <p class="c-ttl__vol2__main"><%- staff.txt13 %></p>
+            <p class="c-ttl__vol2__sub"><%- staff.txt14 %></p>
+          </div>
+          <div class="c-list__staff">
+            <% for(var i=0; i<staff_belong.length; i++){ %>
+              <li class="c-list__staff__li c-list__staff__li__484848">
+                <div class="c-list__staff__li__txt">
+                  <p class="c-list__staff__li__txt__p"><%- staff_belong[i].date %></p>
+                  <p><%- staff_belong[i].txt %></p>
+                </div>
+                <div class="c-list__staff__dashed">
+                  <% if(i!==staff_belong.length-1){ %>
+                    <img src="../asset/images/top_news_dashed.png" alt="none">
+                  <% } %>
+                </div>
+            </li>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

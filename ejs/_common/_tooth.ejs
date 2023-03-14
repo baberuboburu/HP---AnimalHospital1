@@ -1,0 +1,99 @@
+<% tooth = {
+  txt1 : '歯科疾患',
+  txt2 : 'Dental',
+  txt3 : '予防歯科',
+  txt4 : 'PREVENTIVE DENTISTRY',
+  txt5 : '一般的に、 動物の３歳以上の８０％は歯周病になっていると言われています。歯周病が起こらないようにするためには、歯肉炎の段階でのデンタルケアが重要になってきます。',
+  txt6 : '歯周病が起こる段階までの過程',
+  txt7 : '歯周病にまでなってしまうと、そのほとんどは抜歯処置をすることで感染を改善するしか治療法がなくなってしまうため、そうなる前にホームデンタルケア（ブラッシング）やスケーリングなどによりプラークの除去をすることが重要になります。<br><br>歯垢（プラーク）：細菌やマクロファージ、脂質、唾液たんぱく、食物の残渣などからできている<br>歯石：歯垢に唾液中のカルシウムなどが取り込まれ石灰化すると、歯石ができる<br><br>このようにならないために、毎日のプラークコントロール（デンタルケア）や定期的なスケーリングが必要と考えます。',
+  txt8 : '乳歯遺残',
+  txt9 : 'RESIDUAL BABY TOOTH',
+  txt10 : '犬・猫の場合、ひとと同様で、２生歯性（乳歯から永久歯に生え変わる。）という成長を歯は行います。だいたい７か月を目安に乳歯が永久歯に生え変わるのが正常な歯の成長ですが、最近の傾向として乳歯が残りながら永久歯も生えてくる子犬が多いように感じます。<br>  乳歯遺残の状態が一般的に２週間以上続くと不正咬合（かみ合わせの異常）がでてくるため、歯が口蓋粘膜に刺さるという問題や歯のすき間に歯垢がたまりやすくなり、歯周病の原因になると考えられます。<br>  そのため、だいたい去勢や避妊をする際には、乳歯遺残も同時に抜歯してしまうことをすすめています。',
+  txt11 : '歯周病',
+  txt12 : 'PERIODONTAL DISEASE',
+  txt13 : '歯周病も進行すると歯周靭帯が溶けてしまい、歯槽膿漏により歯が抜けてしまいます。最悪の場合、上顎では、鼻とつながる口鼻瘻管や眼窩下膿瘍（化膿）が起こることがあります。<br>その場合は、薬では治ることはないため外科的な治療が必要になります。'
+} %>
+<% tooth_proccess = ['歯垢（プラーク）・歯石の付着','歯肉炎','歯周病'] %>
+<% tooth_imgs = ['../asset/images/tooth_list1.png','../asset/images/tooth_list2.png','../asset/images/tooth_list3.png','../asset/images/tooth_list4.png','../asset/images/tooth_list5.png'] %>
+
+<section class="p-pageTop p-pageTop__tooth">
+  <div class="p-pageTop__txt p-pageTop__txt__white">
+    <p class="p-pageTop__txt--main"><%- tooth.txt1 %></p>
+    <p class="p-pageTop__txt--sub"><%- tooth.txt2 %></p>
+  </div>
+</section>
+
+<section class="l-tooth">
+  <div class="c-ttl__page">
+    <p class="c-ttl__page__main"><%- tooth.txt3 %></p>
+    <p class="c-ttl__page__sub"><%- tooth.txt4 %></p>
+  </div>
+  <p class="l-tooth__intro"><%- tooth.txt5 %></p>
+  <div class="l-tooth__process">
+    <div class="c-bg__yellow">
+      <p class="l-tooth__process__p"><%- tooth.txt6 %></p>
+      <ul class="l-tooth__process__list">
+        <% for(var i=0; i<tooth_proccess.length; i++){ %>
+          <li class="l-tooth__process__list__li">
+            <div class="l-tooth__process__list__li__box">
+              <p class="l-tooth__process__list__li__box__p"><%- tooth_proccess[i] %></p>
+            </div>
+            <div class="l-tooth__process__list__li__triangle"></div>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+  <div class="l-tooth__middle">
+    <p class="l-tooth__middle__p"><%- tooth.txt7 %></p>
+    <ul class="l-tooth__middle__list">
+      <% for(var i=0; i<tooth_imgs.length; i++){ %>
+        <li class="l-tooth__middle__list__li">
+          <div class="l-tooth__middle__list__li__box">
+            <img alt="none" src=<%- tooth_imgs[i] %>>
+          </div>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="l-tooth__residental">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- tooth.txt8 %></p>
+      <p class="c-ttl__page__sub"><%- tooth.txt9 %></p>
+    </div>
+    <div class="l-tooth__residental__txt">
+      <p class="l-tooth__residental__txt__p"><%- tooth.txt10 %></p>
+    </div>
+    <div class="l-tooth__residental__imgs">
+      <div class="l-tooth__residental__imgs__img1">
+        <img src="../asset/images/tooth_residental1.png" alt="none">
+      </div>
+      <div class="l-tooth__residental__imgs__img2">
+        <img src="../asset/images/tooth_residental2.png" alt="none">
+      </div>
+      <div class="l-tooth__residental__imgs__illust">
+        <img src="../asset/images/tooth_illust2.png" alt="none">
+      </div>
+    </div>
+  </div>
+  <div class="l-tooth__periodontal">
+    <div class="c-ttl__page">
+      <p class="c-ttl__page__main"><%- tooth.txt11 %></p>
+      <p class="c-ttl__page__sub"><%- tooth.txt12 %></p>
+    </div>
+    <div class="l-tooth__periodontal__txt">
+      <p class="l-tooth__periodontal__txt__p"><%- tooth.txt13 %></p>
+    </div>
+    <div class="l-tooth__periodontal__imgs">
+      <div class="l-tooth__periodontal__imgs__img1">
+        <img src="../asset/images/tooth_periodontal1.png" alt="none">
+      </div>
+      <div class="l-tooth__periodontal__imgs__img2">
+        <img src="../asset/images/tooth_periodontal2.png" alt="none">
+      </div>
+      <div class="l-tooth__periodontal__imgs__illust">
+        <img src="../asset/images/tooth_illust3.png" alt="none">
+      </div>
+    </div>
+  </div>
+</section>
